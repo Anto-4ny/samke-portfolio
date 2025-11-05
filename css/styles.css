@@ -9,10 +9,11 @@ body {
 /* ✅ SOLID, STICKY NAVBAR */
 /* ✅ Solid, Fixed Navbar (No Transparency Anywhere) */
 .custom-navbar {
-  background-color: #dfffe2 !important; /* Light green */
-  color: #000;
+  background-color: black !important; /* Light green */
+  color: white;
   padding: 12px 0;
   width: 100%;
+  height: 30px;
   position: fixed;
   top: 0;
   z-index: 9999;
