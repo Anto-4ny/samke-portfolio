@@ -94,54 +94,67 @@ body {
   }
 }
 /*****HERO SECTION*****/
-/* Full Hero Background */
+/***** HERO SECTION *****/
 .hero-section {
-  min-height: 100vh;
+  min-height: calc(100vh - 80px); /* Fills screen below navbar */
   padding-top: 100px;
-  padding-bottom: 100px;
+  padding-bottom: 50px;
   background-color: #ffffff;
   color: #000000;
+  position: relative;
 }
 
-/* Premium Text & Button Styling */
-h1, h2 {
-  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Responsive Image styling */
-.hero-section img {
-  max-width: 100%;
+/* Image Responsiveness */
+.hero-img {
+  max-width: 80%;
   height: auto;
   border-radius: 15px;
-  border: 2px solid black;
+  border: 2px solid #000;
 }
 
-/* Adjust Spacing for Small Screens */
+/* Scroll Arrow */
+.scroll-down-arrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #007bff;
+  animation: bounce 1.5s infinite;
+  text-decoration: none;
+}
+
+/* Arrow Animation */
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 10px); }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+  .hero-img {
+    max-width: 60%;
+  }
+}
+
 @media (max-width: 768px) {
   .hero-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
     text-align: center;
+    padding-top: 120px;
   }
-  h1 {
-    font-size: 2rem;
-  }
-  .btn-lg {
-    font-size: 1rem;
-    padding: 10px 20px;
-  }
+  h1 { font-size: 2rem; }
+  .hero-img { max-width: 70%; }
 }
 
-/* Ultra Small Screens (Phones < 576px) */
 @media (max-width: 576px) {
   .hero-section {
     padding-top: 140px;
-    padding-bottom: 140px;
   }
-  h1 {
-    font-size: 1.7rem;
+  .hero-img {
+    max-width: 65%;
+    border-width: 1px;
   }
-  .typed-text-output {
-    font-size: 1.1rem;
+  .scroll-down-arrow {
+    font-size: 1.5rem;
   }
 }
