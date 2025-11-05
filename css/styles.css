@@ -15,8 +15,8 @@ body {
 
 /* Logo size fixed */
 .logo-img {
-  height: 35px;
-  width: 35px;
+  height: 35px !important;
+  width: 35px !important;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid #ffffff;
