@@ -3,7 +3,6 @@ body {
   background: #ffffff;
   color: #000000;
   font-family: 'Poppins', sans-serif;
-  padding-top: 80px;
 }
 
 /* ✅ SOLID, STICKY NAVBAR */
@@ -60,10 +59,11 @@ body {
 /***** HERO SECTION *****/
 .hero-section {
   min-height: calc(100vh - 80px); /* Fills screen below navbar */
-  padding-top: 100px;
+  padding-top: 30px;
   padding-bottom: 50px;
   background-color: #ffffff;
   color: #000000;
+  height: 100%;
   position: relative;
 }
 
@@ -79,7 +79,7 @@ body {
 .scroll-down-arrow {
   position: absolute;
   bottom: 20px;
-  left: 50%;
+  right: 50%;
   transform: translateX(-50%);
   font-size: 2rem;
   color: #007bff;
