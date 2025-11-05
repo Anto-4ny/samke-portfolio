@@ -7,61 +7,66 @@ body {
 }
 
 /* ✅ SOLID, STICKY NAVBAR */
-/* ✅ Solid, Fixed Black Navbar */
+/* ✅ Solid Black Navbar */
 .custom-navbar {
-  background-color: #000 !important;    /* Pure black */
+  background-color: #000 !important; /* Pure black */
   color: #fff !important;
   padding: 12px 0;
   width: 100%;
   position: fixed;
   top: 0;
-  z-index: 9999;
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.3);
+  z-index: 10000;
+  box-shadow: 0px 2px 5px rgba(255,255,255,0.05);
 }
 
-/* ✅ Navbar Brand */
+/* ✅ Brand Logo - Clear & White */
 .navbar-brand {
-  font-size: 1.3rem;
-  color: #fff !important;
+  font-size: 1.4rem;
+  color: #ffffff !important; /* Pure white */
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 .navbar-brand:hover {
-  color: #0d6efd !important; /* Blue */
+  color: #0d6efd !important; /* Clean blue */
 }
 
 /* ✅ Navbar Links */
 .navbar .nav-link {
-  color: #fff !important;     /* White links */
+  color: #ffffff !important;    /* Pure white */
   font-weight: 500;
   font-size: 1rem;
-  padding: 10px 15px;
-  transition: color 0.2s ease;
+  padding: 10px 18px;
+  transition: all 0.2s ease-in-out;
 }
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #0d6efd !important;  /* Blue hover/active */
+  color: #0d6efd !important;    /* Premium blue highlight */
 }
 
-/* ✅ Hamburger icon visible in white */
+/* ✅ Hamburger Icon */
 .navbar-toggler i {
-  font-size: 1.5rem;
-  color: #fff !important;
+  font-size: 1.6rem;
+  color: #ffffff !important; /* Pure white for visibility */
 }
 
-/* ✅ Mobile menu dropdown */
+/* ✅ Mobile Menu */
 .navbar-collapse {
-  background-color: #000 !important;
+  background-color: #000 !important; /* Remains black when expanded */
   padding: 15px 0;
 }
 
-/* ✅ Button (Blue Accent) */
+/* ✅ Blue Button - Clean Accent */
 .navbar .btn-primary {
-  background-color: #0d6efd;
+  background-color: #0d6efd !important; /* Bright blue */
   border: none;
-  color: white;
+  color: #fff;
   font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 5px;
+  transition: 0.2s ease;
 }
 .navbar .btn-primary:hover {
-  background-color: #084298;
+  background-color: #0056d2 !important; /* Slightly darker blue on hover */
 }
 
 /*****HERO SECTION*****/
