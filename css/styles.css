@@ -5,37 +5,43 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Premium Navbar */
+/* Navbar Styling */
 .custom-navbar {
-  background-color: rgba(255, 255, 255, 0.97) !important;
-  padding: 12px 0;
-  display: none; /* initially hidden */
-  transition: all 0.4s ease-in-out;
+  background-color: #dfffe2 !important; /* Light green */
+  color: #ffffff;
+  padding: 10px 0;
+  z-index: 1000;
 }
 
-/* Logo Styling */
+/* Logo size fixed */
 .logo-img {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
+  height: 35px;
+  width: 35px;
   object-fit: cover;
-  border: 2px solid #000;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
 }
 
-/* Navigation Links */
+/* Nav Links Styling */
 .navbar .nav-link {
   color: #000000 !important;
-  font-weight: 500;
   margin: 0 10px;
-  transition: color 0.3s ease;
+  font-weight: 500;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #007bff !important;
+  color: #007bff !important; /* Blue accent */
 }
 
-/* Buttons */
+/* Branding */
+.navbar-brand {
+  color: #000 !important;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Button Colors */
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -46,20 +52,47 @@ body {
   border-color: #0056b3;
 }
 
-/* Mobile Optimization */
+/* Toggler Icon Style for visibility */
+.navbar-toggler {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.navbar-toggler-icon {
+  background-color: #007bff;
+  width: 24px;
+  height: 2px;
+  display: block;
+  position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+  content: '';
+  background-color: #007bff;
+  width: 24px;
+  height: 2px;
+  position: absolute;
+  left: 0;
+}
+
+.navbar-toggler-icon::before {
+  top: -7px;
+}
+
+.navbar-toggler-icon::after {
+  top: 7px;
+}
+
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+  .logo-img {
+    height: 30px;
+    width: 30px;
+  }
   .navbar-brand span {
     font-size: 1rem;
   }
-  .logo-img {
-    height: 35px;
-    width: 35px;
-  }
-  .navbar {
-    padding: 10px 0;
-  }
 }
-
 /*****HERO SECTION*****/
 /* Full Hero Background */
 .hero-section {
