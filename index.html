@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Sam's Media & Images — Production company, art classes, media & reviews. Sam KE (The Duke of Kithi)." />
 
-  <!-- Google Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
@@ -15,19 +15,31 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-  <!-- Portfolio / Gallery Libraries -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-</head>
-<body class="bg-dark text-light">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
 
-<!-- ✅ NAVBAR -->
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<!-- NAVIGATION -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
   <div class="container">
     <a class="navbar-brand font-weight-bold" href="#">Sam's Media & Images</a>
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
+
     <div id="navMenu" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
@@ -36,127 +48,395 @@
         <li class="nav-item"><a class="nav-link" href="#gallery">Portfolio</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
         <li class="nav-item d-none d-lg-block">
-          <a class="btn btn-warning ml-3 text-dark font-weight-bold" href="#contact">Book a Class</a>
+          <a class="btn btn-warning text-dark ml-3" href="#contact">Book a Class</a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- ✅ HERO SECTION -->
-<header id="home" class="container py-5 mt-5">
-  <div class="row align-items-center">
-    <div class="col-lg-5 text-center">
-      <img src="img/sam-logo.jpg" class="img-fluid rounded shadow" alt="Sam Logo">
-    </div>
-    <div class="col-lg-7">
-      <h1 class="display-4 font-weight-bold">SAM'S MEDIA & IMAGES</h1>
-      <p class="lead">The production company that gives a unique touch to your brand — images, media, reviews & features.</p>
-      <p><strong>Sam KE — The Duke of Kithi</strong> · Art & Media · Online Classes</p>
 
-      <a href="#programs" class="btn btn-warning text-dark font-weight-bold mr-2">See Programs</a>
-      <a href="#contact" class="btn btn-outline-light">Contact Sam</a>
+<!-- HERO SECTION -->
+<header id="home" class="vh-100 d-flex align-items-center bg-dark text-white">
+  <div class="container">
+    <div class="row align-items-center">
 
-      <div class="mt-3">
-        <a class="text-light mr-3" href="#"><i class="fab fa-youtube"></i></a>
-        <a class="text-light mr-3" href="#"><i class="fab fa-instagram"></i></a>
-        <a class="text-light mr-3" href="#"><i class="fab fa-facebook"></i></a>
-        <a class="text-light" href="#"><i class="fab fa-twitter"></i></a>
-        <small class="d-block mt-2">Sam's KE (all platforms)</small>
+      <!-- Left Image -->
+      <div class="col-lg-5 text-center mb-4 mb-lg-0">
+        <img src="img/sam-logo.jpg" alt="Sam KE" class="img-fluid rounded shadow">
+      </div>
+
+      <!-- Right Content -->
+      <div class="col-lg-7">
+        <h1 class="display-4 font-weight-bold">SAM'S MEDIA &amp; IMAGES</h1>
+
+        <p class="lead">
+          The production company that gives a unique touch to your brand — images, media, reviews & features
+        </p>
+
+        <p class="mb-3">
+          Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Flexible · Online classes available
+        </p>
+
+        <!-- Buttons -->
+        <div class="mt-4">
+          <a href="#programs" class="btn btn-warning text-dark btn-lg mr-2">See Programs</a>
+          <a href="#contact" class="btn btn-outline-light btn-lg">Contact Sam</a>
+        </div>
+
+        <!-- Small Accent Line -->
+        <div class="mt-4 text-muted small">
+          <i class="fas fa-circle mr-2"></i>
+          Media & Images Hub — your perfect home for images, media, reviews, entertainment & features.
+        </div>
+
+        <!-- Social Icons -->
+        <div class="mt-4">
+          <a class="btn btn-sm btn-outline-light mr-2" href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+          <a class="btn btn-sm btn-outline-light mr-2" href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-sm btn-outline-light mr-2" href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+          <a class="btn btn-sm btn-outline-light mr-2" href="#" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+          <span class="ml-3 text-muted small">Sam's KE (in all platforms)</span>
+        </div>
       </div>
     </div>
   </div>
 </header>
 
-<!-- ✅ ABOUT SECTION -->
-<section id="about" class="container py-5">
-  <div class="row">
-    <div class="col-lg-7">
-      <h2 class="text-warning font-weight-bold" style="font-family: 'Playfair Display', serif;">About Sam & The Brand</h2>
-      <p>Sam's Media & Images is a creative production company providing photography, media content, features, reviews and art programs.</p>
+<!-- ABOUT -->
+<section id="about" class="py-5 bg-dark text-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- LEFT CONTENT -->
+      <div class="col-lg-7">
+        <div class="p-4 border rounded shadow-sm bg-transparent">
+          <h3 class="text-warning mb-3">About Sam & The Brand</h3>
+          <p class="text-muted">
+            Sam's Media & Images is a creative production company that adds a unique touch to your brand. 
+            We produce photography, media content, features, and reviews — and run art programs that discover and develop hidden talents.
+          </p>
 
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <strong>Name:</strong> Sam KE (The Duke of Kithi)
-        </div>
-        <div class="col-md-6 mb-3">
-          <strong>Location:</strong> Kenya — Remote & Online Classes
-        </div>
-        <div class="col-md-6 mb-3">
-          <strong>Schedule:</strong> Flexible · Online
-        </div>
-        <div class="col-md-6 mb-3">
-          <strong>Contact:</strong> info@samsmedia.ke · +254 7XX XXX XXX
+          <div class="row mt-4">
+            <div class="col-md-6 mb-3">
+              <h6 class="text-light mb-1">Name</h6>
+              <p class="text-muted mb-0">Sam KE (The Duke of Kithi)</p>
+            </div>
+            <div class="col-md-6 mb-3">
+              <h6 class="text-light mb-1">Based</h6>
+              <p class="text-muted mb-0">Kenya — Remote & Online Classes</p>
+            </div>
+            <div class="col-md-6 mb-3">
+              <h6 class="text-light mb-1">Availability</h6>
+              <p class="text-muted mb-0">Flexible Schedule · Online Basis</p>
+            </div>
+            <div class="col-md-6 mb-3">
+              <h6 class="text-light mb-1">Contact</h6>
+              <p class="text-muted mb-0">info@samsmedia.ke · +254 7XX XXX XXX</p>
+            </div>
+          </div>
+
+          <div class="mt-4">
+            <a href="#contact" class="btn btn-warning text-dark mr-2">Book a Class</a>
+            <a href="#gallery" class="btn btn-outline-light">View Portfolio</a>
+          </div>
         </div>
       </div>
 
-      <a href="#contact" class="btn btn-warning mr-2 text-dark">Book a Class</a>
-      <a href="#gallery" class="btn btn-outline-light">View Portfolio</a>
-    </div>
+      <!-- RIGHT PROFILE CARD -->
+      <div class="col-lg-5 mt-4 mt-lg-0">
+        <div class="p-4 text-center border rounded shadow-sm bg-transparent">
+          <img src="img/sam-logo.jpg" alt="Sam KE Logo" class="rounded-circle mb-3 shadow-sm" style="width:130px; height:130px; object-fit:cover;">
+          
+          <h5 class="text-warning mb-1">Sam KE</h5>
+          <p class="text-muted">The Duke of Kithi</p>
 
-    <div class="col-lg-5 text-center">
-      <img src="img/sam-logo.jpg" class="rounded-circle border border-secondary" style="width:140px;height:140px;object-fit:cover;">
-      <h5 class="mt-3 text-warning">Sam KE</h5>
-      <small>The Duke of Kithi</small>
-      <ul class="list-unstyled mt-3">
-        <li>📸 Photography & Media Production</li>
-        <li>⭐ Reviews & Features</li>
-        <li>🎨 Pencil, Painting & Calligraphy Classes</li>
-        <li>🎭 Talent Discovery & Mentorship</li>
-      </ul>
+          <div class="text-left mt-3">
+            <h6 class="text-light">What We Do</h6>
+            <ul class="text-muted mt-2 pl-3">
+              <li>Production & Media — Photo, Video & Editing</li>
+              <li>Reviews, Features & Entertainment Content</li>
+              <li>Art Programs — Pencil, Painting & Calligraphy</li>
+              <li>Talent Discovery & Mentorship</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ✅ PROGRAMS -->
-<section id="programs" class="container py-5">
-  <h2 class="text-warning mb-4">Programs & Classes</h2>
-  <div class="row">
+<!-- PROGRAMS / SERVICES -->
+<section id="programs" class="py-5 bg-dark text-light">
+  <div class="container">
 
-    <div class="col-md-4 mb-4">
-      <div class="p-3 bg-secondary rounded">
-        <i class="fas fa-pencil-alt fa-2x text-warning"></i>
-        <h5 class="mt-3">Pencil Classes</h5>
-        <p>Realistic sketching & shading — beginner to advanced.</p>
-      </div>
+    <!-- Title + Subtitle -->
+    <div class="d-flex align-items-center justify-content-between mb-4 flex-column flex-md-row text-center text-md-left">
+      <h2 class="text-warning mb-2 mb-md-0">About The Program</h2>
+      <div class="text-muted">Flexible · Online Basis · Discover & Develop Hidden Talents</div>
     </div>
 
-    <div class="col-md-4 mb-4">
-      <div class="p-3 bg-secondary rounded">
-        <i class="fas fa-paint-brush fa-2x text-warning"></i>
-        <h5 class="mt-3">Painting Classes</h5>
-        <p>Acrylic & watercolor, color theory, canvas projects.</p>
+    <!-- Services Grid -->
+    <div class="row">
+      
+      <!-- Pencil Classes -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex p-3 border rounded shadow-sm h-100">
+          <div class="mr-3 display-5"><i class="fas fa-pencil-alt"></i></div>
+          <div>
+            <h5 class="text-light">Pencil Classes</h5>
+            <p class="text-muted small mt-2 mb-0">Realistic sketching, shading, and fundamentals from beginner to advanced levels. Flexible schedule.</p>
+          </div>
+        </div>
       </div>
+
+      <!-- Painting Classes -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex p-3 border rounded shadow-sm h-100">
+          <div class="mr-3 display-5"><i class="fas fa-paint-brush"></i></div>
+          <div>
+            <h5 class="text-light">Painting Classes</h5>
+            <p class="text-muted small mt-2 mb-0">Acrylic & watercolor techniques, color theory, and completed canvas artwork.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Calligraphy -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex p-3 border rounded shadow-sm h-100">
+          <div class="mr-3 display-5"><i class="fas fa-pen-fancy"></i></div>
+          <div>
+            <h5 class="text-light">Calligraphy Writing</h5>
+            <p class="text-muted small mt-2 mb-0">Modern & traditional lettering styles, tools, and custom branding calligraphy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Media & Editing -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex p-3 border rounded shadow-sm h-100">
+          <div class="mr-3 display-5"><i class="fas fa-image"></i></div>
+          <div>
+            <h5 class="text-light">Media & Image Editing</h5>
+            <p class="text-muted small mt-2 mb-0">Professional photo retouching, video editing, and branding visuals for media campaigns.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event Photography -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex p-3 border rounded shadow-sm h-100">
+          <div class="mr-3 display-5"><i class="fas fa-camera-retro"></i></div>
+          <div>
+            <h5 class="text-light">Event Photography</h5>
+            <p class="text-muted small mt-2 mb-0">Creative coverage of events, portraits, and artistic photography.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reviews & Features -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="d-flex p-3 border rounded shadow-sm h-100">
+          <div class="mr-3 display-5"><i class="fas fa-star"></i></div>
+          <div>
+            <h5 class="text-light">Reviews & Features</h5>
+            <p class="text-muted small mt-2 mb-0">Editorials, reviews, and featured stories highlighting talents & brands.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="col-md-4 mb-4">
-      <div class="p-3 bg-secondary rounded">
-        <i class="fas fa-pen-fancy fa-2x text-warning"></i>
-        <h5 class="mt-3">Calligraphy Writing</h5>
-        <p>Modern & classical lettering for art and branding.</p>
-      </div>
+    <!-- Call-to-Action Buttons -->
+    <div class="mt-4">
+      <a href="#contact" class="btn btn-warning text-dark mr-2">Enroll Now</a>
+      <a href="#gallery" class="btn btn-outline-light">See Work</a>
     </div>
 
   </div>
 </section>
 
-<!-- ✅ FOOTER -->
-<footer class="bg-primary text-white text-center py-4">
-  <div>
-    <a class="text-white mx-2" href="#"><i class="fab fa-twitter"></i></a>
-    <a class="text-white mx-2" href="#"><i class="fab fa-facebook"></i></a>
-    <a class="text-white mx-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-    <a class="text-white mx-2" href="#"><i class="fab fa-instagram"></i></a>
+  <!-- WHY CHOOSE US -->
+<section class="container py-5">
+  <div class="row text-center">
+    <div class="col-md-4 mb-4">
+      <i class="fas fa-clock fa-2x text-warning"></i>
+      <h5 class="mt-3 text-light">Flexible Schedule</h5>
+      <p class="text-muted small">Classes that fit your life — morning, evening or weekend slots.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="fas fa-globe fa-2x text-warning"></i>
+      <h5 class="mt-3 text-light">Online Basis</h5>
+      <p class="text-muted small">Join from anywhere. Live sessions + recorded resources.</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="fas fa-chalkboard-teacher fa-2x text-warning"></i>
+      <h5 class="mt-3 text-light">Talent Discovery</h5>
+      <p class="text-muted small">Mentorship & guidance to develop promising artists into pros.</p>
+    </div>
   </div>
-  <p class="mt-3 mb-1">&copy; Sam's Media — Sam KE · The Duke of Kithi.</p>
-  <small>Designed by <a href="https://antocapteknologies.com" class="text-white font-weight-bold">Antocap Teknologies</a></small>
-</footer>
+</section>
 
-<!-- ✅ JavaScript -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- GALLERY / PORTFOLIO -->
+<section id="gallery" class="container py-5">
+  <h3 class="text-warning mb-2">Portfolio & Featured Work</h3>
+  <p class="text-muted mb-4">Selected photography, artwork, and media features. Click to view larger.</p>
+
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <img src="img/portfolio-1.jpg" class="img-fluid rounded shadow-sm" alt="portfolio 1">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="img/portfolio-2.jpg" class="img-fluid rounded shadow-sm" alt="portfolio 2">
+    </div>
+    <div class="col-md-4 mb-4">
+      <img src="img/portfolio-3.jpg" class="img-fluid rounded shadow-sm" alt="portfolio 3">
+    </div>
+  </div>
+
+  <a href="#" class="btn btn-outline-light mt-3">View More on Socials</a>
+</section>
+
+  <!-- CONTACT SECTION -->
+<section id="contact" class="py-5 bg-dark text-light">
+  <div class="container">
+    <div class="row">
+
+      <!-- Contact Form -->
+      <div class="col-lg-6 mb-4">
+        <div class="p-4 border rounded shadow-sm">
+          <h4 class="text-warning">Get In Touch / Enroll</h4>
+          <p class="text-muted small">Scan the QR to join the WhatsApp group or use the form to message Sam directly.</p>
+
+          <form>
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="small text-muted">Full name</label>
+                <input type="text" class="form-control form-control-lg bg-transparent text-white" placeholder="Your name" required>
+              </div>
+              <div class="form-group col-md-6">
+                <label class="small text-muted">Email</label>
+                <input type="email" class="form-control form-control-lg bg-transparent text-white" placeholder="you@email.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group col-md-6">
+                <label class="small text-muted">Phone</label>
+                <input type="tel" class="form-control form-control-lg bg-transparent text-white" placeholder="+254 7XX XXX XXX">
+              </div>
+              <div class="form-group col-md-6">
+                <label class="small text-muted">Interested in</label>
+                <select class="form-control form-control-lg bg-transparent text-white">
+                  <option>Pencil Classes</option>
+                  <option>Painting Classes</option>
+                  <option>Calligraphy</option>
+                  <option>Media Services</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="small text-muted">Message</label>
+              <textarea class="form-control bg-transparent text-white" rows="3" placeholder="Tell us more..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-warning text-dark">Send Message</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- QR / Contact Info -->
+      <div class="col-lg-6 text-center">
+        <div class="p-4 border rounded shadow-sm">
+          <h5 class="text-warning">Scan to Join / Pay / Contact</h5>
+          <img src="img/qr-sam.png" alt="QR Code" class="mt-3 rounded" style="width:220px;height:220px;object-fit:cover;">
+
+          <div class="mt-4">
+            <h6>Flexible · Online Basis</h6>
+            <p class="text-muted small">We run remote classes and bespoke programs. Contact for schedules and pricing.</p>
+          </div>
+
+          <div>
+            <a class="btn btn-outline-light btn-sm mr-2" href="#"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-outline-light btn-sm mr-2" href="#"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-outline-light btn-sm mr-2" href="#"><i class="fab fa-facebook"></i></a>
+            <a class="btn btn-outline-light btn-sm" href="#"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+   <!-- Footer Start -->
+<div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
+  <div class="container text-center py-5">
+
+    <!-- Social Media Icons -->
+    <div class="d-flex justify-content-center mb-4">
+      <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
+      <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+      <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+      <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Footer Links -->
+    <div class="d-flex justify-content-center mb-3">
+      <a class="text-white" href="#">Privacy</a>
+      <span class="px-3">|</span>
+      <a class="text-white" href="#">Terms</a>
+      <span class="px-3">|</span>
+      <a class="text-white" href="#">FAQs</a>
+      <span class="px-3">|</span>
+      <a class="text-white" href="#">Help</a>
+    </div>
+
+    <!-- Copyright & Info -->
+    <p class="m-0">
+      &copy; <span class="text-white font-weight-bold">Sam's Media — Sam KE · The Duke of Kithi</span>. All Rights Reserved.
+    </p>
+
+    <small class="d-block small-muted">
+      Designed with care · Flexible & Online · For bookings:
+      <a href="mailto:info@samsmedia.ke" class="text-white">info@samsmedia.ke</a>
+    </small>
+
+    <p class="m-0 mt-2">
+      Designed by <a class="text-white font-weight-bold" href="https://antocapteknologies.com" target="_blank">Antocap Teknologies</a>
+    </p>
+
+  </div>
+</div>
+<!-- Footer End -->
+
+<!-- Scroll to Bottom -->
+<i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+
+<!-- Back to Top -->
+<a href="#" class="btn btn-outline-dark px-0 back-to-top">
+  <i class="fa fa-angle-double-up"></i>
+</a>
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
 </body>
+
+
 </html>
+
 
 
 
