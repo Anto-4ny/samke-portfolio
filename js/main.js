@@ -23,7 +23,7 @@ $(document).click(function (event) {
     }
 });
 
-  // Typed.js Init
+// Typed.js Effect
 if ($('.typed-text-output').length == 1) {
     var typed_strings = $('.typed-text').text();
     new Typed('.typed-text-output', {
@@ -33,22 +33,6 @@ if ($('.typed-text-output').length == 1) {
         loop: true
     });
 }
-
-// Video Modal
-$(document).ready(function () {
-    let $videoSrc;
-    $('.btn-play').click(function () {
-        $videoSrc = $(this).data("src");
-    });
-
-    $('#videoModal').on('shown.bs.modal', function () {
-        $("#video").attr('src', $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0");
-    });
-
-    $('#videoModal').on('hide.bs.modal', function () {
-        $("#video").attr('src', "");
-    });
-});
 
 // Scroll to Bottom Icon Visibility
 $(window).scroll(function () {
@@ -104,6 +88,7 @@ $(window).scroll(function () {
     });
     
 })(jQuery);
+
 
 
 
