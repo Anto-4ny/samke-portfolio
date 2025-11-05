@@ -1,535 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>FreeFolio - Freelancer Portfolio Template</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+  <meta charset="utf-8" />
+  <title>Sam's Media & Images — Sam KE</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Sam's Media & Images — Production company, art classes, media & reviews. Sam KE (The Duke of Kithi)." />
 
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0b0b;
+      --card:#0f1113;
+      --accent:#D4AF37; /* gold */
+      --muted:#bdbdbd;
+      --glass: rgba(255,255,255,0.04);
+      --glass-2: rgba(255,255,255,0.02);
+      --primary:#2d2f82; /* option for accents if needed */
+    }
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(180deg, #070707 0%, #0f0f12 100%);
+      color:#eee;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    /* NAV */
+    .navbar{
+      background: linear-gradient(90deg, rgba(0,0,0,0.6), rgba(0,0,0,0.35));
+      backdrop-filter: blur(6px);
+      border-bottom: 1px solid rgba(255,255,255,0.03);
+    }
+    .brand-title{
+      font-family:'Playfair Display', serif;
+      color:var(--accent);
+      font-weight:700;
+      letter-spacing:1px;
+      font-size:1.4rem;
+    }
+    .nav-link{ color: #cfcfcf !important; font-weight:600 }
+    .nav-link:hover{ color: white !important }
+
+    /* HERO */
+    .hero{
+      min-height:86vh;
+      display:flex;
+      align-items:center;
+      padding:4rem 0;
+    }
+    .hero .left{
+      padding-right:2rem;
+    }
+    .portrait{
+      width:100%;
+      max-width:420px;
+      border-radius:50%;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.7), 0 1px 0 rgba(212,175,55,0.06) inset;
+      border:6px solid rgba(255,255,255,0.04);
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    }
+    .hero h1{
+      font-family:'Playfair Display', serif;
+      font-size:3rem;
+      margin:0;
+      color:var(--accent);
+      letter-spacing:1px;
+    }
+    .hero .subtitle{
+      font-size:1.05rem;
+      color:#e6e6e6;
+      margin-top:6px;
+    }
+    .tagline{
+      margin-top:1rem;
+      font-size:1.05rem;
+      color:var(--muted);
+    }
+    .hero .cta a{
+      margin-right:1rem;
+      padding:0.7rem 1.35rem;
+      border-radius:8px;
+      font-weight:600;
+    }
+    .btn-gold{
+      background: linear-gradient(90deg, var(--accent), #f0c85c);
+      color:#0b0b0b;
+      border: none;
+      box-shadow: 0 8px 24px rgba(212,175,55,0.12);
+    }
+    .btn-outline-light{
+      color:#fff;
+      border:1px solid rgba(255,255,255,0.08);
+      background:transparent;
+    }
+
+    /* ABOUT */
+    .about{
+      padding:4rem 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+    }
+    .card-glass{
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:14px;
+      padding:1.7rem;
+      border:1px solid rgba(255,255,255,0.03);
+      box-shadow: 0 6px 30px rgba(0,0,0,0.6);
+    }
+    .small-muted{ color:var(--muted); font-size:0.95rem }
+
+    /* PROGRAMS / SERVICES */
+    .services{
+      padding:4rem 0;
+    }
+    .service-card{
+      background:var(--card);
+      border-radius:12px;
+      padding:1.6rem;
+      border: 1px solid rgba(255,255,255,0.03);
+      transition: transform .36s cubic-bezier(.2,.9,.2,1), box-shadow .36s;
+    }
+    .service-card:hover{ transform: translateY(-8px); box-shadow: 0 20px 50px rgba(0,0,0,0.6) }
+    .service-icon{
+      width:72px;
+      height:72px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.4rem;
+      color:var(--accent);
+      background: linear-gradient(180deg, rgba(212,175,55,0.08), rgba(212,175,55,0.02));
+      margin-right:18px;
+      flex-shrink:0;
+    }
+    .service-title{ font-weight:700; color:#fff; font-size:1.05rem }
+
+    /* WHY CHOOSE */
+    .why{
+      padding:3rem 0;
+      display:flex;
+      gap:1rem;
+    }
+    .why .item{
+      flex:1;
+      background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+      border-radius:12px;
+      padding:1.25rem;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+
+    /* GALLERY */
+    .gallery{
+      padding:3rem 0;
+    }
+    .gallery .thumb{
+      border-radius:8px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,0.03);
+      background:var(--glass-2);
+    }
+
+    /* CONTACT */
+    .contact{
+      padding:3.5rem 0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+    }
+    .qr-box{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      padding:1rem;
+      border-radius:12px;
+      display:inline-block;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    footer{
+      padding:2.2rem 0;
+      text-align:center;
+      color:var(--muted);
+      border-top:1px solid rgba(255,255,255,0.02);
+    }
+
+    /* responsiveness adjustments */
+    @media (max-width:991px){
+      .hero h1{ font-size:2.25rem }
+      .left{ text-align:center; margin-bottom:1.25rem }
+      .portrait{ max-width:340px; margin:0 auto }
+    }
+    @media (max-width:576px){
+      .hero{ padding:2.5rem 0 }
+      .hero h1{ font-size:1.9rem }
+      .service-icon{ width:62px; height:62px }
+    }
+  </style>
 </head>
+<body>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <!-- Navbar Start -->
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
-        <a href="index.html" class="navbar-brand ml-lg-3">
-            <h1 class="m-0 display-5"><span class="text-primary">Free</span>Folio</h1>
-        </a>
-        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse px-lg-3" id="navbarCollapse">
-            <div class="navbar-nav m-auto py-0">
-                <a href="#home" class="nav-item nav-link active">Home</a>
-                <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#qualification" class="nav-item nav-link">Quality</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#service" class="nav-item nav-link">Service</a>
-                <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#testimonial" class="nav-item nav-link">Review</a>
-                <a href="#blog" class="nav-item nav-link">Blog</a>
-                <a href="#contact" class="nav-item nav-link">Contact</a>
-            </div>
-            <a href="https://htmlcodex.com/downloading/?item=1331" class="btn btn-outline-primary d-none d-lg-block">Pro Version</a>
-        </div>
-    </nav>
-    <!-- Navbar End -->
-
-
-    <!-- Video Modal Start -->
-    <div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand brand-title" href="#">Sam's Media &amp; Images</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navMenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav ml-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item d-none d-lg-block"><a class="btn btn-gold ml-3" href="#contact">Book a Class</a></li>
+        </ul>
+      </div>
     </div>
-    <!-- Video Modal End -->
+  </nav>
 
-
-    <!-- Header Start -->
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home" style="min-height: 100vh;">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/profile.jpg" alt="">
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-white font-weight-normal mb-3">I'm</h3>
-                    <h1 class="display-3 text-uppercase text-primary mb-2" style="-webkit-text-stroke: 2px #ffffff;">Kate Winslet</h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-white"></h1>
-                    <div class="typed-text d-none">Web Designer, Web Developer, Front End Developer, Apps Designer, Apps Developer</div>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="" class="btn btn-outline-light mr-5">Download CV</a>
-                        <button type="button" class="btn-play" data-toggle="modal"
-                            data-src="https://www.youtube.com/embed/DWRcNpR6Kdc" data-target="#videoModal">
-                            <span></span>
-                        </button>
-                        <h5 class="font-weight-normal text-white m-0 ml-4 d-none d-sm-block">Play Video</h5>
-                    </div>
-                </div>
-            </div>
+  <!-- HERO -->
+  <header id="home" class="hero">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-5 left">
+          <!-- portrait / logo -->
+          <!-- Replace src with actual portrait or logo: img/sam-portrait.jpg -->
+          <img src="img/sam-portrait.jpg" alt="Sam KE" class="portrait img-fluid shadow-sm">
         </div>
-    </div>
-    <!-- Header End -->
+        <div class="col-lg-7">
+          <h1>SAM'S MEDIA &amp; IMAGES</h1>
+          <div class="subtitle">The production company that gives a unique touch to your brand — images, media, reviews & features</div>
+          <div class="tagline">Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Flexible · Online classes available</div>
 
+          <div class="mt-4 cta">
+            <a href="#programs" class="btn btn-gold">See Programs</a>
+            <a href="#contact" class="btn btn-outline-light">Contact Sam</a>
+          </div>
 
-    <!-- About Start -->
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">About</h1>
-                <h1 class="position-absolute text-uppercase text-primary">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.jpg" alt="">
-                </div>
-                <div class="col-lg-7">
-                    <h3 class="mb-4">UI/UX Designer & Web Developer</h3>
-                    <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum. Amet dolor stet lorem diam dolor justo et dolor dolor dolor</p>
-                    <div class="row mb-3">
-                        <div class="col-sm-6 py-2"><h6>Name: <span class="text-secondary">Kate Winslet</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Birthday: <span class="text-secondary">1 April 1990</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Degree: <span class="text-secondary">Master</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Experience: <span class="text-secondary">10 Years</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Phone: <span class="text-secondary">+012 345 6789</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Email: <span class="text-secondary">info@example.com</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Address: <span class="text-secondary">123 Street, New York, USA</span></h6></div>
-                        <div class="col-sm-6 py-2"><h6>Freelance: <span class="text-secondary">Available</span></h6></div>
-                    </div>
-                    <a href="" class="btn btn-outline-primary mr-4">Hire Me</a>
-                    <a href="" class="btn btn-outline-primary">Learn More</a>
-                </div>
-            </div>
+          <div class="mt-4 small-muted">
+            <i class="fas fa-circle mr-2" style="color:var(--accent);font-size:8px;"></i>
+            Media & Images Hub — your perfect home for images, media, reviews, entertainment & features.
+          </div>
+
+          <div class="mt-4">
+            <a class="btn btn-sm btn-outline-light mr-2" href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-sm btn-outline-light mr-2" href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+            <a class="btn btn-sm btn-outline-light mr-2" href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+            <a class="btn btn-sm btn-outline-light mr-2" href="#" title="X / Twitter"><i class="fab fa-x-twitter"></i></a>
+            <span class="ml-3 small-muted">Sam's KE (in all platforms)</span>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- About End -->
+  </header>
 
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-7">
+          <div class="card-glass">
+            <h3 style="font-family:'Playfair Display', serif; color:var(--accent)">About Sam &amp; The Brand</h3>
+            <p class="small-muted">Sam's Media &amp; Images is a creative production company that gives a unique touch to your brand. We produce photography, media content, features and reviews — and run art programs that discover and develop hidden talents.</p>
 
-    <!-- Qualification Start -->
-    <div class="container-fluid py-5" id="qualification">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Quality</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Education & Expericence</h1>
+            <div class="row mt-3">
+              <div class="col-md-6">
+                <h6 class="mb-1">Name</h6>
+                <div class="small-muted">Sam KE (The Duke of Kithi)</div>
+              </div>
+              <div class="col-md-6">
+                <h6 class="mb-1">Based</h6>
+                <div class="small-muted">Kenya — Remote & Online Classes</div>
+              </div>
+              <div class="col-md-6 mt-3">
+                <h6 class="mb-1">Available</h6>
+                <div class="small-muted">Flexible schedule · Online basis</div>
+              </div>
+              <div class="col-md-6 mt-3">
+                <h6 class="mb-1">Contact</h6>
+                <div class="small-muted">info@samsmedia.ke · +254 7XX XXX XXX</div>
+              </div>
             </div>
-            <div class="row align-items-center">
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Education</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
-                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
-                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Master In CSE</h5>
-                            <p class="mb-2"><strong>Cambridge University</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <h3 class="mb-4">My Expericence</h3>
-                    <div class="border-left border-primary pt-2 pl-4 ml-2">
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                        <div class="position-relative mb-4">
-                            <i class="far fa-dot-circle text-primary position-absolute" style="top: 2px; left: -32px;"></i>
-                            <h5 class="font-weight-bold mb-1">Web Designer</h5>
-                            <p class="mb-2"><strong>Soft Company</strong> | <small>2000 - 2050</small></p>
-                            <p>Tempor eos dolore amet tempor dolor tempor. Dolore ea magna sit amet dolor eirmod. Eos ipsum est tempor dolor. Clita lorem kasd sed ea lorem diam ea lorem eirmod duo sit ipsum stet lorem diam</p>
-                        </div>
-                    </div>
-                </div>
+
+            <div class="mt-4">
+              <a href="#contact" class="btn btn-gold">Book a Class</a>
+              <a href="#gallery" class="btn btn-outline-light">View Portfolio</a>
             </div>
+          </div>
         </div>
-    </div>
-    <!-- Qualification End -->
 
+        <div class="col-lg-5 mt-4 mt-lg-0">
+          <div class="card-glass text-center">
+            <img src="img/sam-logo-circle.png" alt="Sam KE Logo" style="width:140px;height:140px;border-radius:50%;object-fit:cover;border:6px solid rgba(255,255,255,0.03)">
+            <h5 class="mt-3" style="color:var(--accent);font-family:'Playfair Display', serif">Sam KE</h5>
+            <p class="small-muted">The Duke of Kithi</p>
 
-    <!-- Skill Start -->
-    <div class="container-fluid py-5" id="skill">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Skills</h1>
+            <div class="mt-3 text-left">
+              <h6 class="mb-2">What we do</h6>
+              <ul class="small-muted" style="line-height:1.7">
+                <li>Production & Media — photo + video + editing</li>
+                <li>Reviews, features & entertainment content</li>
+                <li>Art Programs — Pencil, Painting & Calligraphy</li>
+                <li>Talent discovery & mentorship</li>
+              </ul>
             </div>
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">HTML</h6>
-                            <h6 class="font-weight-bold">95%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">CSS</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">PHP</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Javascript</h6>
-                            <h6 class="font-weight-bold">90%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Angular JS</h6>
-                            <h6 class="font-weight-bold">95%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    <div class="skill mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="font-weight-bold">Wordpress</h6>
-                            <h6 class="font-weight-bold">85%</h6>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar bg-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- Skill End -->
+  </section>
 
+  <!-- PROGRAMS / SERVICES -->
+  <section id="programs" class="services">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between mb-4">
+        <h2 style="font-family:'Playfair Display', serif;color:var(--accent)">About The Program</h2>
+        <div class="small-muted">Flexible · Online basis · Discover & develop hidden talents</div>
+      </div>
 
-    <!-- Services Start -->
-    <div class="container-fluid pt-5" id="service">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Service</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Services</h1>
+      <div class="row">
+        <!-- Pencil classes -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card d-flex">
+            <div class="service-icon"><i class="fas fa-pencil-alt"></i></div>
+            <div>
+              <div class="service-title">Pencil Classes</div>
+              <div class="small-muted mt-2">Realistic sketching, shading and fundamentals for beginners to advanced students. Flexible schedule.</div>
             </div>
-            <div class="row pb-3">
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Design</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-laptop-code service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Web Development</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-android service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Design</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fab fa-2x fa-apple service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Apps Development</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-search service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">SEO</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center mb-4">
-                        <i class="fa fa-2x fa-edit service-icon bg-primary text-white mr-3"></i>
-                        <h4 class="font-weight-bold m-0">Content Creating</h4>
-                    </div>
-                    <p>Justo sit justo eos amet tempor amet clita amet ipsum eos elitr. Amet lorem lorem lorem est amet labore eirmod erat clita</p>
-                    <a class="border-bottom border-primary text-decoration-none" href="">Read More</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-    <!-- Services End -->
 
-
-    <!-- Portfolio Start -->
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Gallery</h1>
-                <h1 class="position-absolute text-uppercase text-primary">My Portfolio</h1>
+        <!-- Painting -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card d-flex">
+            <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
+            <div>
+              <div class="service-title">Painting Classes</div>
+              <div class="small-muted mt-2">Acrylic & watercolor techniques, color theory and finished canvas projects.</div>
             </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-primary m-1 active"  data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".first">Design</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".second">Development</li>
-                        <li class="btn btn-sm btn-outline-primary m-1" data-filter=".third">Marketing</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-1.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-1.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-2.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-2.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-3.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-3.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item first">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-4.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-4.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item second">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-5.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-5.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 mb-4 portfolio-item third">
-                    <div class="position-relative overflow-hidden mb-2">
-                        <img class="img-fluid rounded w-100" src="img/portfolio-6.jpg" alt="">
-                        <div class="portfolio-btn bg-primary d-flex align-items-center justify-content-center">
-                            <a href="img/portfolio-6.jpg" data-lightbox="portfolio">
-                                <i class="fa fa-plus text-white" style="font-size: 60px;"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-    <!-- Portfolio End -->
 
-
-    <!-- Testimonial Start -->
-    <div class="container-fluid py-5" id="testimonial">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Review</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Clients Say</h1>
+        <!-- Calligraphy -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card d-flex">
+            <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+            <div>
+              <div class="service-title">Calligraphy Writing</div>
+              <div class="small-muted mt-2">Modern & traditional letterforms, tools, and bespoke lettering for events and brands.</div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="owl-carousel testimonial-carousel">
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                        <div class="text-center">
-                            <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                            <h4 class="font-weight-light mb-4">Dolor eirmod diam stet kasd sed. Aliqu rebum est eos. Rebum elitr dolore et eos labore, stet justo sed est sed. Diam sed sed dolor stet accusam amet eirmod eos, labore diam clita</h4>
-                            <img class="img-fluid rounded-circle mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                            <h5 class="font-weight-bold m-0">Client Name</h5>
-                            <span>Profession</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-    <!-- Testimonial End -->
 
-
-    <!-- Blog Start -->
-    <div class="container-fluid pt-5" id="blog">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Blog</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Latest Blog</h1>
+        <!-- Media & Editing -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card d-flex">
+            <div class="service-icon"><i class="fas fa-image"></i></div>
+            <div>
+              <div class="service-title">Media & Image Editing</div>
+              <div class="small-muted mt-2">Professional retouching, color grading and brand visuals for social & campaigns.</div>
             </div>
-            <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-1.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
-                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-2.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
-                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog-3.jpg" alt="">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum</h5>
-                    <a class="btn btn-sm btn-outline-primary py-2" href="">Read More</a>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-    <!-- Blog End -->
 
-
-    <!-- Contact Start -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-primary">Contact Me</h1>
+        <!-- Event Photography -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card d-flex">
+            <div class="service-icon"><i class="fas fa-camera-retro"></i></div>
+            <div>
+              <div class="service-title">Event Photography</div>
+              <div class="small-muted mt-2">Creative coverage for events, portraits and artistic compositions.</div>
             </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <h4 class="text-center mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=1331">Pro Version</a> only.</h4>
-                    <form>
-                        <div class="form-row">
-                            <div class="control-group col-sm-6 mb-3">
-                                <input type="text" class="form-control p-4" placeholder="Your Name" />
-                            </div>
-                            <div class="control-group col-sm-6 mb-3">
-                                <input type="email" class="form-control p-4" placeholder="Your Email" />
-                            </div>
-                        </div>
-                        <div class="control-group mb-3">
-                            <input type="text" class="form-control p-4" placeholder="Subject" />
-                        </div>
-                        <div class="control-group mb-3">
-                            <textarea class="form-control py-3 px-4" rows="5" placeholder="Message"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button class="btn btn-outline-primary">Send Message</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
+          </div>
         </div>
+
+        <!-- Reviews & Features -->
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="service-card d-flex">
+            <div class="service-icon"><i class="fas fa-star"></i></div>
+            <div>
+              <div class="service-title">Reviews & Features</div>
+              <div class="small-muted mt-2">Editorials, reviews and featured stories highlighting talent & brands.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-4">
+        <a class="btn btn-gold mr-2" href="#contact">Enroll Now</a>
+        <a class="btn btn-outline-light" href="#gallery">See Work</a>
+      </div>
     </div>
-    <!-- Contact End -->
+  </section>
+
+  <!-- WHY CHOOSE -->
+  <section class="container">
+    <div class="why">
+      <div class="item">
+        <i class="fas fa-clock fa-2x" style="color:var(--accent)"></i>
+        <h5 class="mt-2">Flexible Schedule</h5>
+        <div class="small-muted">Classes that fit your life — morning, evening or weekend slots.</div>
+      </div>
+      <div class="item">
+        <i class="fas fa-globe fa-2x" style="color:var(--accent)"></i>
+        <h5 class="mt-2">Online Basis</h5>
+        <div class="small-muted">Join from anywhere. Live sessions + recorded resources.</div>
+      </div>
+      <div class="item">
+        <i class="fas fa-chalkboard-teacher fa-2x" style="color:var(--accent)"></i>
+        <h5 class="mt-2">Talent Discovery</h5>
+        <div class="small-muted">Mentorship & guidance to develop promising artists into pros.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY / PORTFOLIO -->
+  <section id="gallery" class="gallery container">
+    <h3 style="font-family:'Playfair Display', serif; color:var(--accent)">Portfolio & Featured Work</h3>
+    <p class="small-muted mb-4">Selected photography, artwork, and media features. Click to view larger.</p>
+
+    <div class="row">
+      <div class="col-md-4 mb-3">
+        <div class="thumb"><img src="img/portfolio-1.jpg" class="img-fluid" alt="portfolio 1"></div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="thumb"><img src="img/portfolio-2.jpg" class="img-fluid" alt="portfolio 2"></div>
+      </div>
+      <div class="col-md-4 mb-3">
+        <div class="thumb"><img src="img/portfolio-3.jpg" class="img-fluid" alt="portfolio 3"></div>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <a href="#" class="btn btn-outline-light">View More on Socials</a>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-4">
+          <div class="card-glass">
+            <h4 style="font-family:'Playfair Display', serif;color:var(--accent)">Get In Touch / Enroll</h4>
+            <p class="small-muted">Scan the QR to join the WhatsApp group or use the form to send a message directly to Sam.</p>
+
+            <form id="contactForm">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label class="small-muted">Full name</label>
+                  <input class="form-control form-control-lg bg-transparent text-white" type="text" placeholder="Your name" required>
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="small-muted">Email</label>
+                  <input class="form-control form-control-lg bg-transparent text-white" type="email" placeholder="you@email.com" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label class="small-muted">Phone</label>
+                  <input class="form-control form-control-lg bg-transparent text-white" type="tel" placeholder="+254 7XX XXX XXX">
+                </div>
+                <div class="form-group col-md-6">
+                  <label class="small-muted">Interested in</label>
+                  <select class="form-control form-control-lg bg-transparent text-white">
+                    <option>Pencil Classes</option>
+                    <option>Painting Classes</option>
+                    <option>Calligraphy</option>
+                    <option>Media Services</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="small-muted">Message</label>
+                <textarea class="form-control bg-transparent text-white" rows="3" placeholder="Tell us more..."></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-gold">Send Message</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-6 text-center">
+          <div class="card-glass">
+            <h5 style="color:var(--accent)">Scan to Join / Pay / Contact</h5>
+            <!-- Replace this src with actual QR: img/qr-sam.png -->
+            <div class="qr-box mt-3">
+              <img src="img/qr-sam.png" alt="QR Code" style="width:220px;height:220px;object-fit:cover;border-radius:6px">
+            </div>
+
+            <div class="mt-4">
+              <h6 class="mb-1">Flexible · Online Basis</h6>
+              <p class="small-muted">We run remote classes and bespoke programs. Contact for schedules and pricing.</p>
+            </div>
+
+            <div class="mt-3">
+              <a class="btn btn-outline-light mr-2" href="#"><i class="fab fa-instagram"></i></a>
+              <a class="btn btn-outline-light mr-2" href="#"><i class="fab fa-youtube"></i></a>
+              <a class="btn btn-outline-light mr-2" href="#"><i class="fab fa-facebook"></i></a>
+              <a class="btn btn-outline-light mr-2" href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script>
+    // smooth scroll for nav links
+    document.querySelectorAll('a.nav-link').forEach(a=>{
+      a.addEventListener('click', e=>{
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if(target) target.scrollIntoView({behavior:'smooth',block:'start'});
+      });
+    });
+
+    // simple contact form submit handler (no backend)
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Thanks — your message has been noted. Sam will contact you shortly.');
+      this.reset();
+    });
+  </script>
 
 
     <!-- Footer Start -->
@@ -550,11 +551,9 @@
                 <span class="px-3">|</span>
                 <a class="text-white" href="#">Help</a>
             </div>
-            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Domain Name</a>. All Rights Reserved. 
-                
-                <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                Designed by <a class="text-white font-weight-bold" href="https://htmlcodex.com">HTML Codex</a>
+            <p class="m-0">&copy; <a class="text-white font-weight-bold" href="#">Sam's Media— Sam KE · The Duke of Kithi. All Rights Reserved. 
+                <div class="small-muted">Designed with care · Flexible & Online · For bookings: info@samsmedia.ke</div>
+                Designed by <a class="text-white font-weight-bold" href="https://antocapteknologies.com">Antocap Teknologies</a>
             </p>
         </div>
     </div>
@@ -568,8 +567,9 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/typed/typed.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
@@ -580,5 +580,6 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
+
 
 </html>
