@@ -67,6 +67,7 @@ body {
   height: 2px;
   display: block;
   position: relative;
+  color: black;
 }
 
 .navbar-toggler-icon::before,
