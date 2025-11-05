@@ -165,3 +165,55 @@ body {
     margin-bottom: 10px;
   }
 }
+
+/***** PROGRAMS / SERVICES****/
+#programs {
+  background-color: #ffffff;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.service-card {
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #e0e0e0;
+  background-color: #fff;
+  border-radius: 12px;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border-color: #c9a227; /* Luxurious gold */
+}
+
+.service-card .icon i {
+  font-size: 2rem;
+  color: #0056b3; /* Deep blue accent */
+}
+
+.btn-primary {
+  background-color: #0056b3;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #003f82;
+}
+
+.btn-outline-dark {
+  border: 1px solid #000;
+}
+
+.btn-outline-dark:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.text-primary {
+  color: #0056b3 !important;
+}
+
+.text-warning,
+.text-gold {
+  color: #c9a227 !important;
+}
