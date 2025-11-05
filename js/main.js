@@ -1,25 +1,23 @@
 (function ($) {
     "use strict";
 
-    // Navbar show/hide on scroll
+ // Show/Hide Navbar on Scroll
 $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
-        $('.navbar').fadeIn('slow').css('display', 'flex');
+        $('.custom-navbar').fadeIn('slow').css('display', 'flex');
     } else {
-        $('.navbar').fadeOut('slow').css('display', 'none');
+        $('.custom-navbar').fadeOut('slow').css('display', 'none');
     }
 });
 
-// Smooth scrolling for links
+// Smooth Scroll with Active Link Highlight
 $(".navbar-nav a").on('click', function (event) {
     if (this.hash !== "") {
         event.preventDefault();
-
         $('html, body').animate({
-            scrollTop: $(this.hash).offset().top - 45
-        }, 1500, 'easeInOutExpo');
+            scrollTop: $(this.hash).offset().top - 70
+        }, 1200, 'easeInOutExpo');
 
-        // Active state update
         $('.navbar-nav .active').removeClass('active');
         $(this).addClass('active');
     }
@@ -106,6 +104,7 @@ $(window).scroll(function () {
     });
     
 })(jQuery);
+
 
 
 
