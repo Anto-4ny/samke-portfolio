@@ -25,46 +25,41 @@ $(".navbar-nav a").on('click', function (event) {
     }
 });
 
-    // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
-        var typed_strings = $('.typed-text').text();
-        var typed = new Typed('.typed-text-output', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        });
+  // Typed.js Init
+if ($('.typed-text-output').length == 1) {
+    var typed_strings = $('.typed-text').text();
+    new Typed('.typed-text-output', {
+        strings: typed_strings.split(', '),
+        typeSpeed: 90,
+        backSpeed: 30,
+        loop: true
+    });
+}
+
+// Video Modal
+$(document).ready(function () {
+    let $videoSrc;
+    $('.btn-play').click(function () {
+        $videoSrc = $(this).data("src");
+    });
+
+    $('#videoModal').on('shown.bs.modal', function () {
+        $("#video").attr('src', $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0");
+    });
+
+    $('#videoModal').on('hide.bs.modal', function () {
+        $("#video").attr('src', "");
+    });
+});
+
+// Scroll to Bottom Icon Visibility
+$(window).scroll(function () {
+    if ($(this).scrollTop() > 100) {
+        $('.scroll-to-bottom').fadeOut('slow');
+    } else {
+        $('.scroll-to-bottom').fadeIn('slow');
     }
-
-
-    // Modal Video
-    $(document).ready(function () {
-        var $videoSrc;
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src");
-        });
-        console.log($videoSrc);
-
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc);
-        })
-    });
-
-
-    // Scroll to Bottom
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scroll-to-bottom').fadeOut('slow');
-        } else {
-            $('.scroll-to-bottom').fadeIn('slow');
-        }
-    });
-
+});
 
     // Skills
     $('.skill').waypoint(function () {
@@ -111,5 +106,6 @@ $(".navbar-nav a").on('click', function (event) {
     });
     
 })(jQuery);
+
 
 
