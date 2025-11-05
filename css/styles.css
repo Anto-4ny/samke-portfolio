@@ -7,10 +7,14 @@ body {
 
 /* Navbar Styling */
 .custom-navbar {
-  background-color: #dfffe2 !important; /* Light green */
-  color: #ffffff;
+  background-color: #dfffe2 !important; /* Light green solid */
+  color: #000000; /* Black text for visibility */
   padding: 10px 0;
   z-index: 1000;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional, adds depth */
 }
 
 /* Logo size fixed */
