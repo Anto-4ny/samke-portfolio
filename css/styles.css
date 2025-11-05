@@ -3,35 +3,57 @@ body {
   background: #ffffff;
   color: #000000;
   font-family: 'Poppins', sans-serif;
-  padding-top: 70px;
+  padding-top: 80px;
 }
 
 /* ✅ SOLID, STICKY NAVBAR */
+/* ✅ Solid, Fixed Navbar (No Transparency Anywhere) */
 .custom-navbar {
   background-color: #dfffe2 !important; /* Light green */
   color: #000;
-  padding: 10px 0;
+  padding: 12px 0;
   width: 100%;
-  position: fixed;  /* stays on top always */
+  position: fixed;
   top: 0;
   z-index: 9999;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
 }
 
-/* ✅ Force solid background when opened in mobile */
+/* ✅ Solid Background for Mobile Menu */
 .navbar-collapse {
+  background-color: #dfffe2 !important;
+  padding: 15px 0;
+}
+
+/* ✅ Bigger, More Visible Links */
+.navbar .nav-link {
+  color: #000 !important;
+  font-weight: 600;
+  font-size: 1.1rem; /* Increased size */
+  padding: 10px 15px; /* Spacing more */
+}
+
+/* ✅ Active & Hover State */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #007bff !important; /* Blue highlight */
+}
+
+/* ✅ Adjust button size */
+.navbar .btn {
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* ✅ Solid Menu also on mobile when expanded */
+.navbar-collapse.show {
   background-color: #dfffe2 !important;
 }
 
-/* ✅ Links */
-.navbar .nav-link {
-  color: #000 !important;
-  font-weight: 500;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-  color: #007bff !important; /* Blue */
+/* ✅ Optional – Make hamburger icon slightly bigger */
+.navbar-toggler i {
+  font-size: 1.4rem;
 }
 
 /*****HERO SECTION*****/
