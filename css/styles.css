@@ -217,3 +217,46 @@ body {
 .text-gold {
   color: #c9a227 !important;
 }
+
+/****WHY CHOOSE SECTION AND BELOW****/
+/* Global Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Styling */
+#why-us, #gallery, #contact {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+/* Hover zoom effect */
+.hover-scale {
+  transition: transform .3s ease;
+}
+.hover-scale:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+.btn-primary {
+  background: #0056b3;
+  border: none;
+}
+.btn-primary:hover {
+  background: #003f82;
+}
+.btn-outline-primary {
+  color: #0056b3;
+  border-color: #0056b3;
+}
+.btn-outline-primary:hover {
+  background: #0056b3;
+  color: #fff;
+}
+
+/* Gold highlight */
+.text-gold {
+  color: #c9a227;
+}
+
