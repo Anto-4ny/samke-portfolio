@@ -1,0 +1,88 @@
+/* Base Colors */
+body {
+  background: #ffffff;
+  color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  display: none; /* Hidden initially */
+}
+
+.navbar .nav-link {
+  color: #000000 !important;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover {
+  color: #007bff !important; /* Blue accent */
+}
+
+.navbar-brand {
+  color: #000000 !important;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/*****HERO SECTION*****/
+/* Full Hero Background */
+.hero-section {
+  min-height: 100vh;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Premium Text & Button Styling */
+h1, h2 {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive Image styling */
+.hero-section img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
+/* Adjust Spacing for Small Screens */
+@media (max-width: 768px) {
+  .hero-section {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    text-align: center;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .btn-lg {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Ultra Small Screens (Phones < 576px) */
+@media (max-width: 576px) {
+  .hero-section {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  h1 {
+    font-size: 1.7rem;
+  }
+  .typed-text-output {
+    font-size: 1.1rem;
+  }
+}
