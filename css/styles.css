@@ -5,79 +5,46 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* Navbar Styling */
+/* Ensure Navbar Background is Solid */
 .custom-navbar {
-  background-color: #dfffe2 !important; /* Light green solid */
-  color: #000000; /* Black text for visibility */
+  background-color: #dfffe2 !important; /* Light green */
+  color: #000 !important;
   padding: 10px 0;
   z-index: 1000;
+  width: 100%;
   position: sticky;
   top: 0;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional, adds depth */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Logo size fixed */
-.logo-img {
-  height: 35px !important;
-  width: 35px !important;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 2px solid #ffffff;
+/* Force background for collapse menu on mobile */
+.navbar-collapse {
+  background-color: #dfffe2 !important;
 }
 
-/* Nav Links Styling */
-.navbar .nav-link {
-  color: #000000 !important;
-  margin: 0 10px;
-  font-weight: 500;
-}
-
-.navbar .nav-link:hover,
-.navbar .nav-link.active {
-  color: #007bff !important; /* Blue accent */
-}
-
-/* Branding */
-.navbar-brand {
-  color: #000 !important;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-/* Button Colors */
-.btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
-}
-
-.btn-primary:hover {
-  background-color: #0056b3;
-  border-color: #0056b3;
-}
-
-/* Toggler Icon Style for visibility */
+/* Fix Hamburger Icon Visibility */
 .navbar-toggler {
-  border-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  outline: none !important;
 }
 
 .navbar-toggler-icon {
-  background-color: #007bff;
-  width: 24px;
-  height: 2px;
-  display: block;
+  background-image: none !important; /* Remove Bootstrap default */
   position: relative;
-  color: black;
+  width: 25px;
+  height: 2px;
+  background-color: #000; /* Middle line */
+  display: inline-block;
 }
 
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   content: '';
-  background-color: #007bff;
-  width: 24px;
-  height: 2px;
   position: absolute;
   left: 0;
+  width: 25px;
+  height: 2px;
+  background-color: #000; /* Black lines */
 }
 
 .navbar-toggler-icon::before {
@@ -88,15 +55,14 @@ body {
   top: 7px;
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .logo-img {
-    height: 30px;
-    width: 30px;
-  }
-  .navbar-brand span {
-    font-size: 1rem;
-  }
+/* Ensure links remain visible */
+.navbar .nav-link {
+  color: #000 !important;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #007bff !important; /* Blue accent */
 }
 /*****HERO SECTION*****/
 /***** HERO SECTION *****/
