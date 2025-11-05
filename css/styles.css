@@ -13,7 +13,7 @@ body {
   color: white;
   padding: 12px 0;
   width: 100%;
-  height: 30px;
+  height: 60px;
   position: fixed;
   top: 0;
   z-index: 9999;
@@ -22,7 +22,7 @@ body {
 
 /* ✅ Solid Background for Mobile Menu */
 .navbar-collapse {
-  background-color: #dfffe2 !important;
+  background-color: black !important;
   padding: 15px 0;
 }
 
@@ -30,7 +30,7 @@ body {
 .navbar .nav-link {
   color: #000 !important;
   font-weight: 600;
-  font-size: 1.1rem; /* Increased size */
+  font-size: 0.95rem; /* Increased size */
   padding: 10px 15px; /* Spacing more */
 }
 
@@ -49,7 +49,7 @@ body {
 
 /* ✅ Solid Menu also on mobile when expanded */
 .navbar-collapse.show {
-  background-color: #dfffe2 !important;
+  background-color: black !important;
 }
 
 /* ✅ Optional – Make hamburger icon slightly bigger */
