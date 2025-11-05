@@ -28,31 +28,38 @@ body {
   outline: none !important;
 }
 
+/* Visible 3-Line Hamburger Icon */
 .navbar-toggler-icon {
-  background-image: none !important; /* Remove Bootstrap default */
-  position: relative;
-  width: 25px;
-  height: 2px;
-  background-color: #000; /* Middle line */
   display: inline-block;
+  width: 30px;
+  height: 2px;
+  background-color: transparent !important; /* Remove center line */
+  position: relative;
 }
 
 .navbar-toggler-icon::before,
-.navbar-toggler-icon::after {
-  content: '';
+.navbar-toggler-icon::after,
+.navbar-toggler-icon span {
+  content: "";
   position: absolute;
   left: 0;
-  width: 25px;
-  height: 2px;
+  width: 30px;
+  height: 3px;
   background-color: #000; /* Black lines */
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler-icon span {
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .navbar-toggler-icon::before {
-  top: -7px;
+  top: -8px;
 }
 
 .navbar-toggler-icon::after {
-  top: 7px;
+  top: 8px;
 }
 
 /* Ensure links remain visible */
