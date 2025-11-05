@@ -121,3 +121,47 @@ body {
     font-size: 1.5rem;
   }
 }
+/*****ABOUT SECTION*****/
+/* ✅ Colors */
+.text-gold { color: #d4af37; }
+.btn-gold {
+  background-color: #d4af37;
+  border: none;
+}
+.btn-gold:hover {
+  background-color: #b8962e;
+}
+
+/* ✅ Section spacing */
+#about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* ✅ Card Styling */
+#about .border {
+  border-color: rgba(0,0,0,0.1) !important;
+  border-radius: 12px;
+}
+
+/* ✅ Shadow & hover elevation */
+#about .shadow-sm {
+  transition: all 0.3s ease-in-out;
+}
+#about .shadow-sm:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ✅ Responsive layout */
+@media (max-width: 768px) {
+  #about {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  .btn-gold, 
+  .btn-outline-primary {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
