@@ -32,16 +32,23 @@
 <body>
 
 <!-- NAVIGATION -->
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm">
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm custom-navbar">
   <div class="container">
-    <a class="navbar-brand font-weight-bold" href="#">Sam's Media & Images</a>
 
+    <!-- Logo Left -->
+    <a class="navbar-brand d-flex align-items-center" href="#home">
+      <img src="img/sam-logo.jpg" alt="Sam Logo" class="logo-img mr-2">
+      <span class="font-weight-bold">Sam's Media & Images</span>
+    </a>
+
+    <!-- Mobile Toggle Button -->
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Menu -->
     <div id="navMenu" class="collapse navbar-collapse">
-      <ul class="navbar-nav ml-auto">
+      <ul class="navbar-nav ml-auto align-items-lg-center">
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
         <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
@@ -52,6 +59,7 @@
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
 
@@ -434,6 +442,7 @@
 
 
 </html>
+
 
 
 
