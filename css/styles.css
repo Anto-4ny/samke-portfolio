@@ -11,7 +11,7 @@ body {
   color: #000;
   padding: 10px 0;
   width: 100%;
-  position: sticky !important;
+  position: fixed;  /* stays on top always */
   top: 0;
   z-index: 9999;
   box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
@@ -22,49 +22,15 @@ body {
   background-color: #dfffe2 !important;
 }
 
-/* ✅ Hamburger Button Fix — FULLY VISIBLE */
-.navbar-toggler {
-  border: none;
-  padding: 5px;
-}
-
-.navbar-toggler-icon {
-  position: relative;
-  display: inline-block;
-  width: 30px;
-  height: 2px;
-  background-color: transparent !important; /* remove default */
-}
-
-.navbar-toggler-icon::before,
-.navbar-toggler-icon::after,
-.navbar-toggler-icon span {
-  content: "";
-  position: absolute;
-  left: 0;
-  width: 30px;
-  height: 3px;
-  background-color: #000; /* Black lines */
-}
-
-.navbar-toggler-icon span {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.navbar-toggler-icon::before { top: -8px; }
-.navbar-toggler-icon::after { top: 8px; }
-
-/* ✅ Nav links */
+/* ✅ Links */
 .navbar .nav-link {
   color: #000 !important;
   font-weight: 500;
-  margin: 0 10px;
 }
 
 .navbar .nav-link:hover,
 .navbar .nav-link.active {
-  color: #007bff !important;
+  color: #007bff !important; /* Blue */
 }
 
 /*****HERO SECTION*****/
