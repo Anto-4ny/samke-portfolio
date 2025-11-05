@@ -5,25 +5,37 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-.navbar {
-  background-color: #ffffff !important;
-  color: #000000 !important;
-  display: none; /* Hidden initially */
+/* Premium Navbar */
+.custom-navbar {
+  background-color: rgba(255, 255, 255, 0.97) !important;
+  padding: 12px 0;
+  display: none; /* initially hidden */
+  transition: all 0.4s ease-in-out;
 }
 
+/* Logo Styling */
+.logo-img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #000;
+}
+
+/* Navigation Links */
 .navbar .nav-link {
   color: #000000 !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
 }
 
-.navbar .nav-link.active,
-.navbar .nav-link:hover {
-  color: #007bff !important; /* Blue accent */
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: #007bff !important;
 }
 
-.navbar-brand {
-  color: #000000 !important;
-}
-
+/* Buttons */
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -32,6 +44,20 @@ body {
 .btn-primary:hover {
   background-color: #0056b3;
   border-color: #0056b3;
+}
+
+/* Mobile Optimization */
+@media (max-width: 768px) {
+  .navbar-brand span {
+    font-size: 1rem;
+  }
+  .logo-img {
+    height: 35px;
+    width: 35px;
+  }
+  .navbar {
+    padding: 10px 0;
+  }
 }
 
 /*****HERO SECTION*****/
