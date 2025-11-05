@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
 
-// ✅ Smooth Scroll & Active Link
+// ✅ Smooth Scrolling + Active Link
 $(".navbar-nav a").on('click', function (e) {
     if (this.hash !== "") {
         e.preventDefault();
@@ -10,18 +10,17 @@ $(".navbar-nav a").on('click', function (e) {
         }, 800);
         $('.nav-link').removeClass('active');
         $(this).addClass('active');
-        $('.navbar-collapse').collapse('hide'); // Auto-close on mobile
+        $('.navbar-collapse').collapse('hide'); // Auto-close after clicking link
     }
 });
 
-// ✅ Close menu when clicking outside
-$(document).click(function (event) {
-    const click = $(event.target);
-    const opened = $(".navbar-collapse").hasClass("show");
-    if (opened && !click.closest('.navbar').length) {
-        $(".navbar-collapse").collapse('hide');
+// ✅ Toggle menu open/close when clicking outside
+$(document).click(function (e) {
+    if (!$(e.target).closest('.navbar').length) {
+        $('.navbar-collapse').collapse('hide');
     }
 });
+
 
 // Typed.js Effect
 if ($('.typed-text-output').length == 1) {
@@ -88,6 +87,7 @@ $(window).scroll(function () {
     });
     
 })(jQuery);
+
 
 
 
