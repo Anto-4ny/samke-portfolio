@@ -1,25 +1,25 @@
 (function ($) {
     "use strict";
 
- // Show/Hide Navbar on Scroll
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 200) {
-        $('.custom-navbar').fadeIn('slow').css('display', 'flex');
-    } else {
-        $('.custom-navbar').fadeOut('slow').css('display', 'none');
-    }
-});
-
-// Smooth Scroll with Active Link Highlight
+// Smooth scrolling + active link update
 $(".navbar-nav a").on('click', function (event) {
     if (this.hash !== "") {
         event.preventDefault();
         $('html, body').animate({
             scrollTop: $(this.hash).offset().top - 70
-        }, 1200, 'easeInOutExpo');
-
+        }, 1000);
         $('.navbar-nav .active').removeClass('active');
         $(this).addClass('active');
+        $('.navbar-collapse').collapse('hide'); // Close menu on mobile after clicking
+    }
+});
+
+// Close navbar when clicking outside on mobile
+$(document).click(function (event) {
+    const clickOver = $(event.target);
+    const _opened = $(".navbar-collapse").hasClass("show");
+    if (_opened === true && !clickOver.hasClass("navbar-toggler")) {
+        $(".navbar-collapse").collapse('hide');
     }
 });
 
@@ -104,6 +104,7 @@ $(window).scroll(function () {
     });
     
 })(jQuery);
+
 
 
 
