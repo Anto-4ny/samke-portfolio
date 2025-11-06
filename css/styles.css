@@ -91,75 +91,75 @@ body {
 
 /*****HERO SECTION*****/
 /* HERO SECTION */
-/* HERO SECTION */
 .hero-section {
-  min-height: 100vh; /* Full screen height */
-  padding: 80px 0;  /* To breathe under fixed navbar */
-  background: #ffffff;
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
+  background: #ffffff;
+  padding: 0; /* Remove extra spacing */
 }
 
-/* ✅ Background Layer */
+/* Background */
 .overlay-bg {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, #cce0ff, #ffffff);
   animation: gradientMove 6s ease-in-out infinite alternate;
   opacity: 0.4;
   z-index: -1;
 }
 
-/* ✅ Logo / Image (Responsive & Proportional) */
+/* Hero Image */
 .hero-img {
   width: 100%;
-  max-width: 420px; /* Controls size on desktop */
+  max-width: 500px; /* Bigger on desktops */
   height: auto;
-  object-fit: contain; /* Keeps aspect ratio */
+  object-fit: cover;
   border-radius: 12px;
   border: 2px solid #000;
-  display: block;
-  margin: 0 auto;
 }
 
-/* ✅ Texts */
+/* Title & Text */
 .hero-title {
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 .word-rotate {
-  font-size: 1.5rem;
-  min-height: 35px;
-}
-.hero-subtext {
-  font-size: 1rem;
-  color: #333;
+  font-size: 1.4rem;
+  min-height: 34px;
 }
 
-/* ✅ Scroll Icon */
+/* Scroll Arrow */
 .scroll-down-arrow {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 1.8rem;
   color: #007bff;
+  font-size: 1.8rem;
   animation: bounce 1.5s infinite;
 }
 
-/* ✅ Responsive Fixes */
-@media (max-width: 992px) {
-  .hero-section { text-align: center; }
-  .hero-img { max-width: 300px; }
-}
+/* ✅ Responsive - Mobile Fix */
 @media (max-width: 768px) {
-  .hero-title { font-size: 2rem; }
-  .word-rotate { font-size: 1.2rem; }
-  .hero-img { max-width: 250px; }
-  .hero-section { padding-top: 100px; }
+  .hero-section {
+    text-align: center;
+    padding-top: 70px; /* Consider fixed navbar */
+  }
+  .hero-img {
+    max-width: 100%; /* Full width image on mobile */
+  }
+  .hero-title {
+    font-size: 2rem;
+  }
+  .word-rotate {
+    font-size: 1.2rem;
+  }
 }
 
 /*****ABOUT SECTION*****/
