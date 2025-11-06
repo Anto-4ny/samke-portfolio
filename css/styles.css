@@ -116,9 +116,9 @@ body {
 
 /* Hero Image */
 .hero-img {
-  width: 100%;
-  max-width: 500px; /* Bigger on desktops */
-  height: auto;
+  width: auto;
+  max-height: 500px; /* Bigger on desktops */
+  height: 100%;
   object-fit: cover;
   border-radius: 12px;
   border: 2px solid #000;
@@ -149,7 +149,7 @@ body {
 @media (max-width: 768px) {
   .hero-section {
     text-align: center;
-    padding-top: 70px; /* Consider fixed navbar */
+    padding-top: 100px; /* Consider fixed navbar */
   }
   .hero-img {
     max-width: 100%; /* Full width image on mobile */
