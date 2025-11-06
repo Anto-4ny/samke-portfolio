@@ -4,7 +4,7 @@ body {
   color: #000000;
   font-family: 'Poppins', sans-serif;
   width: 100%;
-  padding-top: 70px;
+  padding-top: 100px;
 }
 /* Make all containers full-width unless you want boxed layout */
 .container, .container-lg, .container-md, .container-sm, .container-xl {
