@@ -91,65 +91,54 @@ body {
 }
 
 /*****HERO SECTION*****/
-/* ✅ HERO SECTION */
+/* HERO SECTION */
 .hero-section {
-  position: relative;
-  padding: 100px 5% 50px; /* Reduced empty space */
+  height: 100vh; /* Full viewport height */
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1200px;
-  margin: auto;
-  min-height: 90vh; /* Keeps section balanced without extra empty gaps */
+  position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  padding: 0; /* Remove extra spacing */
 }
 
-/* ✅ Background Overlay */
+/* Background */
 .overlay-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #dfefff, #ffffff);
-  opacity: 0.5;
+  background: linear-gradient(135deg, #cce0ff, #ffffff);
+  animation: gradientMove 6s ease-in-out infinite alternate;
+  opacity: 0.4;
   z-index: -1;
 }
 
-/* ✅ Hero Image */
+/* Hero Image */
 .hero-img {
   width: 100%;
-  max-width: 450px; /* Slightly reduced to avoid excess whitespace */
-  border-radius: 15px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  max-width: 500px; /* Bigger on desktops */
+  height: auto;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid #000;
 }
 
-/* ✅ Right Content (Glassmorphism) */
-.hero-right {
-  max-width: 600px;
-  padding: 30px;
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 15px;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
-
-/* ✅ Titles */
+/* Title & Text */
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  color: #000;
 }
 .word-rotate {
   font-size: 1.4rem;
-  font-weight: 500;
-  color: #007bff;
+  min-height: 34px;
 }
 
-/* ✅ Scroll Arrow */
+/* Scroll Arrow */
 .scroll-down-arrow {
   position: absolute;
-  bottom: 20px;
+  bottom: 15px;
   left: 50%;
   transform: translateX(-50%);
   color: #007bff;
@@ -157,33 +146,20 @@ body {
   animation: bounce 1.5s infinite;
 }
 
-/* ✅ Animation */
-@keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 8px); }
-}
-
-/* ✅ MOBILE RESPONSIVENESS */
+/* ✅ Responsive - Mobile Fix */
 @media (max-width: 768px) {
   .hero-section {
-    flex-direction: column;        /* Stack image & content */
     text-align: center;
-    padding: 120px 5% 40px;        /* Align below fixed navbar */
-    min-height: auto;              /* Prevent huge blank height */
+    padding-top: 70px; /* Consider fixed navbar */
   }
   .hero-img {
-    max-width: 90%;
-    margin-bottom: 20px;
+    max-width: 100%; /* Full width image on mobile */
   }
   .hero-title {
     font-size: 2rem;
   }
   .word-rotate {
     font-size: 1.2rem;
-  }
-  .hero-right {
-    padding: 20px;
-    width: 100%;
   }
 }
 
