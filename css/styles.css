@@ -91,77 +91,75 @@ body {
 
 /*****HERO SECTION*****/
 /* HERO SECTION */
+/* HERO SECTION */
 .hero-section {
-  height: 100%;
-  position: relative;
-  overflow: hidden;
+  min-height: 100vh; /* Full screen height */
+  padding: 80px 0;  /* To breathe under fixed navbar */
   background: #ffffff;
-  color: #000;
   display: flex;
   align-items: center;
+  position: relative;
+  overflow: hidden;
 }
 
-/* ✅ Live Gradient / Particle Background */
+/* ✅ Background Layer */
 .overlay-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
   background: linear-gradient(135deg, #cce0ff, #ffffff);
   animation: gradientMove 6s ease-in-out infinite alternate;
   opacity: 0.4;
   z-index: -1;
 }
-@keyframes gradientMove {
-  from { background-position: left; }
-  to { background-position: right; }
+
+/* ✅ Logo / Image (Responsive & Proportional) */
+.hero-img {
+  width: 100%;
+  max-width: 420px; /* Controls size on desktop */
+  height: auto;
+  object-fit: contain; /* Keeps aspect ratio */
+  border-radius: 12px;
+  border: 2px solid #000;
+  display: block;
+  margin: 0 auto;
 }
 
-/* ✅ Title & Subtle Text */
+/* ✅ Texts */
 .hero-title {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 700;
+}
+.word-rotate {
+  font-size: 1.5rem;
+  min-height: 35px;
 }
 .hero-subtext {
   font-size: 1rem;
   color: #333;
 }
 
-/* ✅ Auto Word Rotator (No Flickering) */
-.word-rotate {
-  font-size: 1.4rem;
-  min-height: 32px;
-}
-
-/* ✅ Image */
-.hero-img {
-  border-radius: 10px;
-  height: 450px;
-  border: 2px solid #000;
-}
-
-/* ✅ Scroll Arrow */
+/* ✅ Scroll Icon */
 .scroll-down-arrow {
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  color: #007bff;
   font-size: 1.8rem;
+  color: #007bff;
   animation: bounce 1.5s infinite;
 }
-@keyframes bounce {
-  0%,100% { transform: translate(-50%, 0); }
-  50% { transform: translate(-50%, 10px); }
-}
 
-/* ✅ Responsive Fonts */
+/* ✅ Responsive Fixes */
+@media (max-width: 992px) {
+  .hero-section { text-align: center; }
+  .hero-img { max-width: 300px; }
+}
 @media (max-width: 768px) {
-  .hero-section{ margin-top: 50px; }
-  .hero-title { font-size: 1.8rem; }
+  .hero-title { font-size: 2rem; }
   .word-rotate { font-size: 1.2rem; }
-  .hero-img { width: 100%; }
+  .hero-img { max-width: 250px; }
+  .hero-section { padding-top: 100px; }
 }
 
 /*****ABOUT SECTION*****/
