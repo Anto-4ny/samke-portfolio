@@ -4,7 +4,6 @@ body {
   color: #000000;
   font-family: 'Poppins', sans-serif;
   width: 100%;
-  padding-top: 100px;
 }
 /* Make all containers full-width unless you want boxed layout */
 .container, .container-lg, .container-md, .container-sm, .container-xl {
@@ -102,8 +101,9 @@ body {
 /*****HERO SECTION*****/
 /* HERO SECTION */
 .hero-section {
-    width: 100%;
+  width: 100%;
   max-width: 100%;
+  height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between; /* Better for layout */
