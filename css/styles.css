@@ -137,7 +137,6 @@ body {
 /* ✅ Image */
 .hero-img {
   border-radius: 10px;
-  width: 50%;
   height: 100%;
   border: 2px solid #000;
 }
@@ -159,6 +158,7 @@ body {
 
 /* ✅ Responsive Fonts */
 @media (max-width: 768px) {
+  .hero-section{ margin-top: 60px; }
   .hero-title { font-size: 1.8rem; }
   .word-rotate { font-size: 1.2rem; }
   .hero-img { width: 100%; }
