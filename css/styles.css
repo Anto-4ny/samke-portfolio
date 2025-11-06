@@ -91,61 +91,65 @@ body {
 }
 
 /*****HERO SECTION*****/
-/* HERO SECTION */
+/* ✅ HERO SECTION */
 .hero-section {
-  padding: 100px 5% 50px;
+  position: relative;
+  padding: 100px 5% 50px; /* Reduced empty space */
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 40px;
   max-width: 1200px;
   margin: auto;
+  min-height: 90vh; /* Keeps section balanced without extra empty gaps */
 }
 
-/* Background */
+/* ✅ Background Overlay */
 .overlay-bg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #cce0ff, #ffffff);
-  animation: gradientMove 6s ease-in-out infinite alternate;
-  opacity: 0.4;
+  background: linear-gradient(135deg, #dfefff, #ffffff);
+  opacity: 0.5;
   z-index: -1;
 }
 
-/* Hero Image */
+/* ✅ Hero Image */
 .hero-img {
   width: 100%;
-  max-width: 500px;
-  border-radius: 12px;
+  max-width: 450px; /* Slightly reduced to avoid excess whitespace */
+  border-radius: 15px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* ✅ Right Content (Glassmorphism) */
 .hero-right {
   max-width: 600px;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.65);
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.7);
   border-radius: 15px;
   backdrop-filter: blur(15px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Title & Text */
+/* ✅ Titles */
 .hero-title {
-  font-size: 1.2rem;
-  color: #444;
-  margin-top: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
 }
 .word-rotate {
   font-size: 1.4rem;
-  min-height: 34px;
+  font-weight: 500;
+  color: #007bff;
 }
 
-/* Scroll Arrow */
+/* ✅ Scroll Arrow */
 .scroll-down-arrow {
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
   color: #007bff;
@@ -153,20 +157,33 @@ body {
   animation: bounce 1.5s infinite;
 }
 
-/* ✅ Responsive - Mobile Fix */
+/* ✅ Animation */
+@keyframes bounce {
+  0%, 100% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, 8px); }
+}
+
+/* ✅ MOBILE RESPONSIVENESS */
 @media (max-width: 768px) {
   .hero-section {
+    flex-direction: column;        /* Stack image & content */
     text-align: center;
-    padding-top: 100px; /* Consider fixed navbar */
+    padding: 120px 5% 40px;        /* Align below fixed navbar */
+    min-height: auto;              /* Prevent huge blank height */
   }
   .hero-img {
-    max-width: 100%; /* Full width image on mobile */
+    max-width: 90%;
+    margin-bottom: 20px;
   }
   .hero-title {
     font-size: 2rem;
   }
   .word-rotate {
     font-size: 1.2rem;
+  }
+  .hero-right {
+    padding: 20px;
+    width: 100%;
   }
 }
 
