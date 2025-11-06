@@ -61,7 +61,12 @@
 <body>
   
 <header id="home" class="hero-section d-flex align-items-center justify-content-center" data-aos="fade-in">
+  
   <div class="overlay-bg"></div> <!-- Live Animated Background -->
+  <canvas id="particle-canvas"></canvas> <!-- ✨ Floating Sparkles Layer -->
+
+  <div class="container position-relative">
+    <div class="glass-box p-4 p-md-5">
 
   <div class="container position-relative">
     <div class="glass-box p-4 p-md-5"> <!-- ✅ Glassmorphism Box -->
@@ -107,6 +112,63 @@
 
   <a href="#about" class="scroll-down-arrow"><i class="fas fa-arrow-down"></i></a>
 </header>
+
+  <script>
+const canvas = document.getElementById("particle-canvas");
+const ctx = canvas.getContext("2d");
+
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+const particles = [];
+
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 1; // sparkle size
+    this.speedY = Math.random() * 1 - 0.5;
+    this.speedX = Math.random() * 1 - 0.5;
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+    if (this.x < 0 || this.x > canvas.width) this.x = Math.random() * canvas.width;
+    if (this.y < 0 || this.y > canvas.height) this.y = Math.random() * canvas.height;
+  }
+  draw() {
+    ctx.fillStyle = "rgba(255,255,255,0.8)";
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+function initParticles() {
+  particles.length = 0;
+  for (let i = 0; i < 100; i++) {
+    particles.push(new Particle());
+  }
+}
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  particles.forEach(p => {
+    p.update();
+    p.draw();
+  });
+  requestAnimationFrame(animateParticles);
+}
+
+initParticles();
+animateParticles();
+
+window.addEventListener("resize", () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  initParticles();
+});
+</script>
 
 <!-- ✅ ABOUT SECTION -->
 <section id="about" class="py-5 bg-white text-dark">
@@ -420,6 +482,7 @@
 
 
 </html>
+
 
 
 
