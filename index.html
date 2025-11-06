@@ -59,116 +59,53 @@
 </nav>
   </head>
 <body>
-  
+
+  <!-- ✅ HERO SECTION -->
 <header id="home" class="hero-section d-flex align-items-center justify-content-center" data-aos="fade-in">
-  
-  <div class="overlay-bg"></div> <!-- Live Animated Background -->
-  <canvas id="particle-canvas"></canvas> <!-- ✨ Floating Sparkles Layer -->
+  <div class="overlay-bg"></div> <!-- Live Background -->
 
-  <div class="container position-relative">
-    <div class="glass-box p-4 p-md-5">
+  <div class="container position-relative text-center text-lg-left">
+    <div class="row align-items-center">
 
-  <div class="container position-relative">
-    <div class="glass-box p-4 p-md-5"> <!-- ✅ Glassmorphism Box -->
+      <!-- ✅ Left Logo -->
+      <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="zoom-in">
+        <img src="img/sam-logo.jpg" alt="Sam KE Logo" class="hero-img img-fluid">
+      </div>
 
-      <div class="row align-items-center">
+      <!-- ✅ Right Content -->
+      <div class="col-lg-7" data-aos="fade-left">
+        <h1 class="hero-title">SAM'S MEDIA & IMAGES</h1>
 
-        <!-- Logo -->
-        <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="zoom-in">
-          <img src="img/sam-logo.jpg" alt="Sam KE Logo" class="hero-img img-fluid">
+        <!-- ✅ Smooth Fade Text (No Flicker) -->
+        <h2 class="word-rotate text-primary mb-3">
+          <span id="changing-text">Luxury Media</span>
+        </h2>
+
+        <p class="hero-subtext">
+          Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Online Classes Available
+        </p>
+
+        <!-- ✅ Buttons -->
+        <div class="mt-4">
+          <a href="#programs" class="btn btn-primary text-white btn-lg mr-2 mb-2">See Programs</a>
+          <a href="#contact" class="btn btn-outline-dark btn-lg mb-2">Contact Sam</a>
         </div>
 
-        <!-- Hero Content -->
-        <div class="col-lg-7 text-center text-lg-left" data-aos="fade-left">
-          <h1 class="hero-title">SAM'S MEDIA & IMAGES</h1>
-
-          <!-- Luxury Fade Text -->
-          <h2 class="word-rotate text-primary mb-3">
-            <span id="changing-text">Luxury Media</span>
-          </h2>
-
-          <p class="hero-subtext">
-            Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Online Classes Available
-          </p>
-
-          <!-- CTA Buttons -->
-          <div class="mt-4">
-            <a href="#programs" class="btn btn-primary text-white btn-lg mr-2 mb-2">See Programs</a>
-            <a href="#contact" class="btn btn-outline-dark btn-lg mb-2">Contact Sam</a>
-          </div>
-
-          <!-- Social Icons -->
-          <div class="mt-4">
-            <a class="btn btn-sm btn-outline-dark mr-2"><i class="fab fa-youtube" style="color: #FF0000;"></i></a>
-            <a class="btn btn-sm btn-outline-dark mr-2"><i class="fab fa-instagram" style="color: #E1306C;"></i></a>
-            <a class="btn btn-sm btn-outline-dark mr-2"><i class="fab fa-facebook" style="color: #1877F2;"></i></a>
-            <a class="btn btn-sm btn-outline-dark"><i class="fab fa-x-twitter" style="color: #000;"></i></a>
-          </div>
+        <!-- ✅ Social Icons (Colored) -->
+        <div class="mt-4">
+          <a class="btn btn-sm btn-outline-dark mr-2" href="#"><i class="fab fa-youtube" style="color: #FF0000;"></i></a>
+          <a class="btn btn-sm btn-outline-dark mr-2" href="#"><i class="fab fa-instagram" style="color: #E1306C;"></i></a>
+          <a class="btn btn-sm btn-outline-dark mr-2" href="#"><i class="fab fa-facebook" style="color: #1877f2;"></i></a>
+          <a class="btn btn-sm btn-outline-dark" href="#"><i class="fab fa-x-twitter" style="color: #000000;"></i></a>
         </div>
 
       </div>
     </div>
+
+    <!-- ✅ Scroll Arrow -->
+    <a href="#about" class="scroll-down-arrow"><i class="fas fa-arrow-down"></i></a>
   </div>
-
-  <a href="#about" class="scroll-down-arrow"><i class="fas fa-arrow-down"></i></a>
 </header>
-
-  <script>
-const canvas = document.getElementById("particle-canvas");
-const ctx = canvas.getContext("2d");
-
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
-
-const particles = [];
-
-class Particle {
-  constructor() {
-    this.x = Math.random() * canvas.width;
-    this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1; // sparkle size
-    this.speedY = Math.random() * 1 - 0.5;
-    this.speedX = Math.random() * 1 - 0.5;
-  }
-  update() {
-    this.x += this.speedX;
-    this.y += this.speedY;
-    if (this.x < 0 || this.x > canvas.width) this.x = Math.random() * canvas.width;
-    if (this.y < 0 || this.y > canvas.height) this.y = Math.random() * canvas.height;
-  }
-  draw() {
-    ctx.fillStyle = "rgba(255,255,255,0.8)";
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-    ctx.fill();
-  }
-}
-
-function initParticles() {
-  particles.length = 0;
-  for (let i = 0; i < 100; i++) {
-    particles.push(new Particle());
-  }
-}
-
-function animateParticles() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => {
-    p.update();
-    p.draw();
-  });
-  requestAnimationFrame(animateParticles);
-}
-
-initParticles();
-animateParticles();
-
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  initParticles();
-});
-</script>
 
 <!-- ✅ ABOUT SECTION -->
 <section id="about" class="py-5 bg-white text-dark">
@@ -482,6 +419,7 @@ window.addEventListener("resize", () => {
 
 
 </html>
+
 
 
 
