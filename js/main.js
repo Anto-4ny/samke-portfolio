@@ -94,21 +94,8 @@ $(window).scroll(function () {
   });
 
 const words = ["Luxury Media", "Premium Images", "Elite Visuals"];
-let wordIndex = 0;
-
+let i = 0;
 setInterval(() => {
-  document.getElementById("changing-text").textContent = words[wordIndex];
-  wordIndex = (wordIndex + 1) % words.length;
+  document.getElementById("changing-text").innerText = words[i];
+  i = (i + 1) % words.length;
 }, 2500);
-
-
-
-
-
-
-
-
-
-
-
-
