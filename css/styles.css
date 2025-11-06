@@ -91,69 +91,77 @@ body {
 }
 
 /*****HERO SECTION*****/
-/***** HERO SECTION *****/
+/* HERO SECTION */
 .hero-section {
-  min-height: calc(100vh - 80px); /* Fills screen below navbar */
-  padding-top: 100px;
-  padding-bottom: 50px;
-  background-color: #ffffff;
-  color: #000000;
+  height: 100vh; /* Full screen */
   position: relative;
+  overflow: hidden;
+  background: #ffffff;
+  color: #000;
+  display: flex;
+  align-items: center;
 }
 
-/* Image Responsiveness */
+/* ✅ Live Gradient / Particle Background */
+.overlay-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #cce0ff, #ffffff);
+  animation: gradientMove 6s ease-in-out infinite alternate;
+  opacity: 0.4;
+  z-index: -1;
+}
+@keyframes gradientMove {
+  from { background-position: left; }
+  to { background-position: right; }
+}
+
+/* ✅ Title & Subtle Text */
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.hero-subtext {
+  font-size: 1rem;
+  color: #333;
+}
+
+/* ✅ Auto Word Rotator (No Flickering) */
+.word-rotate {
+  font-size: 1.4rem;
+  min-height: 32px;
+}
+
+/* ✅ Image */
 .hero-img {
-  max-width: 80%;
-  height: auto;
-  border-radius: 15px;
+  border-radius: 10px;
+  max-width: 85%;
   border: 2px solid #000;
 }
 
-/* Scroll Arrow */
+/* ✅ Scroll Arrow */
 .scroll-down-arrow {
   position: absolute;
-  bottom: 20px;
-  right: 50%;
+  bottom: 15px;
+  left: 50%;
   transform: translateX(-50%);
-  font-size: 2rem;
   color: #007bff;
+  font-size: 1.8rem;
   animation: bounce 1.5s infinite;
-  text-decoration: none;
 }
-
-/* Arrow Animation */
 @keyframes bounce {
-  0%, 100% { transform: translate(-50%, 0); }
+  0%,100% { transform: translate(-50%, 0); }
   50% { transform: translate(-50%, 10px); }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-  .hero-img {
-    max-width: 60%;
-  }
-}
-
+/* ✅ Responsive Fonts */
 @media (max-width: 768px) {
-  .hero-section {
-    text-align: center;
-    padding-top: 120px;
-  }
-  h1 { font-size: 2rem; }
+  .hero-title { font-size: 1.8rem; }
+  .word-rotate { font-size: 1.2rem; }
   .hero-img { max-width: 70%; }
-}
-
-@media (max-width: 576px) {
-  .hero-section {
-    padding-top: 140px;
-  }
-  .hero-img {
-    max-width: 65%;
-    border-width: 1px;
-  }
-  .scroll-down-arrow {
-    font-size: 1.5rem;
-  }
 }
 /*****ABOUT SECTION*****/
 /* ✅ Colors */
