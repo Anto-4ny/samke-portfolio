@@ -21,7 +21,7 @@ body {
 
 /* ✅ Brand Logo - Clear & White */
 .navbar-brand {
-  font-size: 1.4rem;
+  font-size: 1rem;
   color: #ffffff !important; /* Pure white */
   font-weight: 600;
   letter-spacing: 0.5px;
