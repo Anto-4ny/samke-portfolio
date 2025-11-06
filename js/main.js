@@ -93,6 +93,15 @@ $(window).scroll(function () {
     once: true
   });
 
+const words = ["Luxury Media", "Premium Images", "Elite Visuals"];
+let i = 0;
+setInterval(() => {
+  document.getElementById("changing-text").innerText = words[i];
+  i = (i + 1) % words.length;
+}, 2500);
+
+
+
 
 
 
