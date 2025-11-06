@@ -102,6 +102,17 @@ body {
   align-items: center;
 }
 
+/* ✨ Particle Canvas Layer */
+#particle-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Behind glass box */
+  pointer-events: none;
+}
+
 /* Live Animated Background */
 .overlay-bg {
   position: absolute;
