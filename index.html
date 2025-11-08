@@ -20,7 +20,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
 
     <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2e0e6ad31.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -31,81 +32,84 @@
   
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
 
-<!-- ✅ NAVIGATION BAR -->
-<nav class="navbar navbar-expand-lg custom-navbar shadow-sm" data-aos="fade-down">
-  <div class="container">
-    <a class="navbar-brand font-weight-bold text-white" href="#home">Sam's Media & Images</a>
+<body class="bg-white text-black font-poppins antialiased overflow-x-hidden">
 
-    <!-- ✅ Font Awesome Hamburger Icon -->
-    <button class="navbar-toggler text-white" type="button" data-toggle="collapse" data-target="#navMenu" aria-expanded="false" aria-label="Toggle navigation">
-      <i class="fas fa-bars"></i>
-    </button>
+  <!-- ✅ STICKY LUXURY NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-lg shadow-lg transition-all duration-300">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
+      
+      <!-- Brand -->
+      <a href="#home" class="text-white font-semibold text-lg tracking-wide hover:text-blue-500 transition">
+        Sam’s Media & Images
+      </a>
 
-    <!-- ✅ Menu -->
-    <div class="collapse navbar-collapse" id="navMenu">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="#programs">Programs</a></li>
-        <li class="nav-item"><a class="nav-link" href="#gallery">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-        <li class="nav-item d-none d-lg-block">
-          <a class="btn btn-primary ml-3" href="#contact">Book a Class</a>
-        </li>
+      <!-- Hamburger -->
+      <button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Nav Links -->
+      <ul id="menu" class="hidden lg:flex space-x-8 items-center">
+        <li><a href="#home" class="text-white hover:text-blue-500 transition">Home</a></li>
+        <li><a href="#about" class="text-white hover:text-blue-500 transition">About</a></li>
+        <li><a href="#programs" class="text-white hover:text-blue-500 transition">Programs</a></li>
+        <li><a href="#gallery" class="text-white hover:text-blue-500 transition">Portfolio</a></li>
+        <li><a href="#contact" class="text-white hover:text-blue-500 transition">Contact</a></li>
+        <li><a href="#contact" class="ml-4 bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Book a Class</a></li>
       </ul>
     </div>
-  </div>
-</nav>
-  </head>
-<body>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden flex-col bg-black text-white space-y-4 py-4 px-6 lg:hidden">
+      <a href="#home" class="hover:text-blue-500">Home</a>
+      <a href="#about" class="hover:text-blue-500">About</a>
+      <a href="#programs" class="hover:text-blue-500">Programs</a>
+      <a href="#gallery" class="hover:text-blue-500">Portfolio</a>
+      <a href="#contact" class="hover:text-blue-500">Contact</a>
+      <a href="#contact" class="bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition">Book a Class</a>
+    </div>
+  </nav>
 
   <!-- ✅ HERO SECTION -->
-<header id="home" class="hero-section d-flex align-items-center justify-content-center" data-aos="fade-in">
-  <div class="overlay-bg"></div> <!-- Live Background -->
+  <header id="home" class="relative flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen px-6 lg:px-20 pt-24 overflow-hidden">
 
-  <div class="container position-relative text-center text-lg-left">
-    <div class="row align-items-center">
+    <!-- Background Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-gray-100 animate-[gradientMove_8s_ease-in-out_infinite_alternate] opacity-50"></div>
 
-      <!-- ✅ Left Logo -->
-      <div class="col-lg-5 text-center mb-4 mb-lg-0" data-aos="zoom-in">
-        <img src="img/hero.png" alt="Sam KE Logo" class="hero-img img-fluid">
+    <!-- Text Section -->
+    <div class="relative z-10 text-center lg:text-left max-w-xl space-y-5 mt-10 lg:mt-0">
+      <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight">SAM'S MEDIA & IMAGES</h1>
+      <h2 class="text-xl lg:text-2xl font-semibold text-blue-600 transition-all duration-500">
+        <span id="changing-text">Luxury Media</span>
+      </h2>
+      <p class="text-gray-700 text-base lg:text-lg">Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Online Classes Available</p>
+
+      <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-6">
+        <a href="#programs" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">See Programs</a>
+        <a href="#contact" class="border border-gray-800 hover:bg-gray-900 hover:text-white text-gray-800 px-6 py-3 rounded-lg font-semibold transition">Contact Sam</a>
       </div>
 
-      <!-- ✅ Right Content -->
-      <div class="col-lg-7" data-aos="fade-left">
-        <h1 class="hero-title">SAM'S MEDIA & IMAGES</h1>
-
-        <!-- ✅ Smooth Fade Text (No Flicker) -->
-        <h2 class="word-rotate text-primary mb-3">
-          <span id="changing-text">Luxury Media</span>
-        </h2>
-
-        <p class="hero-subtext">
-          Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Online Classes Available
-        </p>
-
-        <!-- ✅ Buttons -->
-        <div class="mt-4">
-          <a href="#programs" class="btn btn-primary text-white btn-lg mr-2 mb-2">See Programs</a>
-          <a href="#contact" class="btn btn-outline-dark btn-lg mb-2">Contact Sam</a>
-        </div>
-
-        <!-- ✅ Social Icons (Colored) -->
-        <div class="mt-4">
-          <a class="btn btn-sm btn-outline-dark mr-2" href="#"><i class="fab fa-youtube" style="color: #FF0000;"></i></a>
-          <a class="btn btn-sm btn-outline-dark mr-2" href="#"><i class="fab fa-instagram" style="color: #E1306C;"></i></a>
-          <a class="btn btn-sm btn-outline-dark mr-2" href="#"><i class="fab fa-facebook" style="color: #1877f2;"></i></a>
-          <a class="btn btn-sm btn-outline-dark" href="#"><i class="fab fa-x-twitter" style="color: #000000;"></i></a>
-        </div>
-
+      <!-- Social Icons -->
+      <div class="flex justify-center lg:justify-start gap-4 mt-6">
+        <a href="#" class="hover:scale-110 transition"><i class="fab fa-youtube text-red-600 text-2xl"></i></a>
+        <a href="#" class="hover:scale-110 transition"><i class="fab fa-instagram text-pink-500 text-2xl"></i></a>
+        <a href="#" class="hover:scale-110 transition"><i class="fab fa-facebook text-blue-600 text-2xl"></i></a>
+        <a href="#" class="hover:scale-110 transition"><i class="fab fa-x-twitter text-black text-2xl"></i></a>
       </div>
     </div>
 
-    <!-- ✅ Scroll Arrow -->
-    <a href="#about" class="scroll-down-arrow"><i class="fas fa-arrow-down"></i></a>
-  </div>
-</header>
+    <!-- Hero Image -->
+    <div class="relative z-10 mb-8 lg:mb-0">
+      <img src="img/hero.png" alt="Sam KE Logo" class="w-[320px] sm:w-[400px] lg:w-[500px] rounded-2xl border-2 border-black shadow-xl hover:scale-105 transition-transform duration-500">
+    </div>
+
+    <!-- Scroll Down Arrow -->
+    <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-blue-600 text-3xl animate-[bounce_1.5s_infinite]">
+      <i class="fas fa-arrow-down"></i>
+    </a>
+  </header>
 
 <!-- ✅ ABOUT SECTION -->
 <section id="about" class="py-5 bg-white text-dark">
@@ -417,6 +421,7 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
