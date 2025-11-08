@@ -91,8 +91,8 @@
   <i class="fas fa-bars"></i>
 </button>
 
-<!-- Mobile Menu (Sliding from Top) -->
-<div id="mobile-menu" class="hidden fixed inset-0 bg-blue-500 text-white z-40 shadow-lg">
+<!-- Mobile Menu (Dropdown) -->
+<div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 shadow-lg z-40 rounded-b-lg overflow-hidden">
   <!-- Close Button -->
   <div class="flex justify-end p-4">
     <button id="menu-close" class="text-white text-3xl focus:outline-none">
@@ -100,12 +100,12 @@
     </button>
   </div>
 
-  <ul class="flex flex-col space-y-4 py-6 px-6 font-semibold">
-    <li><a href="#home" class="block nav-link hover:text-yellow-400 transition">Home</a></li>
-    <li><a href="#about" class="block nav-link hover:text-yellow-400 transition">About</a></li>
-    <li><a href="#programs" class="block nav-link hover:text-yellow-400 transition">Programs</a></li>
-    <li><a href="#gallery" class="block nav-link hover:text-yellow-400 transition">Portfolio</a></li>
-    <li><a href="#contact" class="block nav-link hover:text-yellow-400 transition">Contact</a></li>
+  <ul class="flex flex-col space-y-3 py-4 px-6 font-semibold">
+    <li><a href="#home" class="block nav-link text-white hover:text-yellow-400 transition">Home</a></li>
+    <li><a href="#about" class="block nav-link text-white hover:text-yellow-400 transition">About</a></li>
+    <li><a href="#programs" class="block nav-link text-white hover:text-yellow-400 transition">Programs</a></li>
+    <li><a href="#gallery" class="block nav-link text-white hover:text-yellow-400 transition">Portfolio</a></li>
+    <li><a href="#contact" class="block nav-link text-white hover:text-yellow-400 transition">Contact</a></li>
     <li>
       <a href="#contact" class="block bg-white text-black text-center py-2 rounded-lg hover:bg-gray-200 transition">
         Book a Class
@@ -395,6 +395,7 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
