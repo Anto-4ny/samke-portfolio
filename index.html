@@ -88,7 +88,13 @@
 </nav>
 
 <!-- ✅ HERO SECTION -->
-<header id="home" class="relative flex flex-col lg:flex-row items-center justify-between min-h-screen px-6 lg:px-20 pt-24 bg-gradient-to-br from-white via-gray-100 to-blue-50">
+<header id="home" class="relative flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen px-6 lg:px-20 pt-24 bg-gradient-to-br from-white via-gray-100 to-blue-50">
+
+  <!-- Image Section (First on small screens) -->
+  <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mb-10 lg:mb-0" data-aos="fade-left">
+    <img src="img/hero.png" alt="Sam KE Logo"
+      class="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full lg:h-[650px] object-cover rounded-2xl border-2 border-black shadow-xl hover:scale-105 transition-transform duration-500">
+  </div>
 
   <!-- Text Section -->
   <div class="w-full lg:w-1/2 text-center lg:text-left max-w-xl space-y-6 lg:pr-10" data-aos="fade-right">
@@ -116,12 +122,6 @@
       <a href="#" class="hover:scale-110 transition"><i class="fab fa-facebook text-blue-600 text-2xl"></i></a>
       <a href="#" class="hover:scale-110 transition"><i class="fab fa-x-twitter text-black text-2xl"></i></a>
     </div>
-  </div>
-
-  <!-- Image Section -->
-  <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-10 lg:mt-0" data-aos="fade-left">
-    <img src="img/hero.png" alt="Sam KE Logo"
-      class="w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-full rounded-2xl border-2 border-black shadow-xl hover:scale-105 transition-transform duration-500">
   </div>
 
 </header>
@@ -349,6 +349,7 @@
 <script src="js/main.js"></script>-->
 </body>
 </html>
+
 
 
 
