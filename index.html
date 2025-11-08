@@ -6,92 +6,81 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="Sam's Media & Images — Production company, art classes, media & reviews. Sam KE (The Duke of Kithi)." />
 
-  <!-- 🖋️ Premium Fonts -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- 🪶 Tailwind CSS (Primary Framework) -->
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.0/dist/tailwind.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/a2e0e6ad31.js" crossorigin="anonymous"></script>
 
-  <!-- 🧩 Bootstrap (Optional Components Only — Avoid grid conflicts) -->
-  <!-- If you only use Bootstrap JS for modals, carousels, etc., you can keep this -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- 🎨 Font Awesome-->
-<!-- ✅ Font Awesome 6.5.0 - No integrity -->
-<link 
-  rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-/>
-
-  <!-- ✨ Animation Libraries -->
+  <!-- AOS (Animate on Scroll) -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-  <!-- 🖼️ Carousel / Lightbox (if used in your Gallery or Portfolio) -->
-  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
-
-  <!-- 🧑‍🎨 Your Custom Overrides -->
-  <link href="css/styles.css" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .text-gold { color: #c9a227; }
+    .btn-gold {
+      background-color: #c9a227;
+      transition: all 0.3s ease;
+    }
+    .btn-gold:hover {
+      background-color: #b0911f;
+    }
+    .hover-scale { transition: transform 0.4s ease; }
+    .hover-scale:hover { transform: scale(1.05); }
+  </style>
 </head>
 
-<body class="bg-white text-black font-poppins antialiased overflow-x-hidden">
+<body class="bg-white text-gray-900 antialiased overflow-x-hidden">
 
-  <!-- ✅ STICKY LUXURY NAVBAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-lg shadow-lg transition-all duration-300">
-    <div class="max-w-7xl mx-auto flex items-center justify-between px-6 py-3">
-      
-      <!-- Brand -->
-      <a href="#home" class="text-white font-semibold text-lg tracking-wide hover:text-blue-500 transition">
-        Sam’s Media & Images
-      </a>
+  <!-- ✅ NAVBAR -->
+  <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-md">
+    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <a href="#home" class="text-white font-semibold text-lg tracking-wide hover:text-gold transition">Sam’s Media & Images</a>
+      <button id="menu-btn" class="lg:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
 
-      <!-- Hamburger -->
-      <button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
-        <i class="fas fa-bars"></i>
-      </button>
-
-      <!-- Nav Links -->
-      <ul id="menu" class="hidden lg:flex space-x-8 items-center">
-        <li><a href="#home" class="text-white hover:text-blue-500 transition">Home</a></li>
-        <li><a href="#about" class="text-white hover:text-blue-500 transition">About</a></li>
-        <li><a href="#programs" class="text-white hover:text-blue-500 transition">Programs</a></li>
-        <li><a href="#gallery" class="text-white hover:text-blue-500 transition">Portfolio</a></li>
-        <li><a href="#contact" class="text-white hover:text-blue-500 transition">Contact</a></li>
-        <li><a href="#contact" class="ml-4 bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition">Book a Class</a></li>
+      <ul id="menu" class="hidden lg:flex space-x-8 text-white">
+        <li><a href="#home" class="hover:text-gold transition">Home</a></li>
+        <li><a href="#about" class="hover:text-gold transition">About</a></li>
+        <li><a href="#programs" class="hover:text-gold transition">Programs</a></li>
+        <li><a href="#gallery" class="hover:text-gold transition">Portfolio</a></li>
+        <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
+        <li>
+          <a href="#contact" class="ml-4 bg-gold text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
+            Book a Class
+          </a>
+        </li>
       </ul>
     </div>
 
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden flex-col bg-black text-white space-y-4 py-4 px-6 lg:hidden">
-      <a href="#home" class="hover:text-blue-500">Home</a>
-      <a href="#about" class="hover:text-blue-500">About</a>
-      <a href="#programs" class="hover:text-blue-500">Programs</a>
-      <a href="#gallery" class="hover:text-blue-500">Portfolio</a>
-      <a href="#contact" class="hover:text-blue-500">Contact</a>
-      <a href="#contact" class="bg-blue-600 text-white text-center py-2 rounded-lg hover:bg-blue-700 transition">Book a Class</a>
+      <a href="#home" class="hover:text-gold">Home</a>
+      <a href="#about" class="hover:text-gold">About</a>
+      <a href="#programs" class="hover:text-gold">Programs</a>
+      <a href="#gallery" class="hover:text-gold">Portfolio</a>
+      <a href="#contact" class="hover:text-gold">Contact</a>
+      <a href="#contact" class="bg-gold text-black text-center py-2 rounded-lg hover:bg-yellow-500 transition">Book a Class</a>
     </div>
   </nav>
 
-  <!-- ✅ HERO SECTION -->
-  <header id="home" class="relative flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen px-6 lg:px-20 pt-24 overflow-hidden">
-
-    <!-- Background Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-br from-blue-100 via-white to-gray-100 animate-[gradientMove_8s_ease-in-out_infinite_alternate] opacity-50"></div>
-
+  <!-- ✅ HERO -->
+  <header id="home" class="relative flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen px-6 lg:px-20 pt-28 bg-gradient-to-br from-white via-gray-100 to-blue-50">
+    
     <!-- Text Section -->
-    <div class="relative z-10 text-center lg:text-left max-w-xl space-y-5 mt-10 lg:mt-0">
-      <h1 class="text-4xl lg:text-6xl font-extrabold text-gray-900 leading-tight">SAM'S MEDIA & IMAGES</h1>
-      <h2 class="text-xl lg:text-2xl font-semibold text-blue-600 transition-all duration-500">
-        <span id="changing-text">Luxury Media</span>
-      </h2>
-      <p class="text-gray-700 text-base lg:text-lg">Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Online Classes Available</p>
+    <div class="text-center lg:text-left max-w-xl space-y-6" data-aos="fade-right">
+      <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight">SAM’S MEDIA & IMAGES</h1>
+      <h2 class="text-xl lg:text-2xl font-semibold text-blue-600"><span id="changing-text">Luxury Media</span></h2>
+      <p class="text-gray-700">Sam KE — <strong>The Duke of Kithi</strong> · Art & Media · Online Classes Available</p>
 
       <div class="flex flex-wrap justify-center lg:justify-start gap-4 mt-6">
         <a href="#programs" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition">See Programs</a>
         <a href="#contact" class="border border-gray-800 hover:bg-gray-900 hover:text-white text-gray-800 px-6 py-3 rounded-lg font-semibold transition">Contact Sam</a>
       </div>
 
-      <!-- Social Icons -->
       <div class="flex justify-center lg:justify-start gap-4 mt-6">
         <a href="#" class="hover:scale-110 transition"><i class="fab fa-youtube text-red-600 text-2xl"></i></a>
         <a href="#" class="hover:scale-110 transition"><i class="fab fa-instagram text-pink-500 text-2xl"></i></a>
@@ -100,313 +89,283 @@
       </div>
     </div>
 
-    <!-- Hero Image -->
-    <div class="relative z-10 mb-8 lg:mb-0">
-      <img src="img/hero.png" alt="Sam KE Logo" class="w-[320px] sm:w-[200px] lg:w-[250px] rounded-2xl border-2 border-black shadow-xl hover:scale-105 transition-transform duration-500">
+    <!-- Image -->
+    <div class="relative mb-10 lg:mb-0" data-aos="fade-left">
+      <img src="img/hero.png" alt="Sam KE Logo"
+        class="w-[220px] sm:w-[180px] lg:w-[200px] rounded-2xl border-2 border-black shadow-xl hover:scale-105 transition-transform duration-500 mx-auto">
     </div>
 
-    <!-- Scroll Down Arrow -->
-    <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-blue-600 text-3xl animate-[bounce_1.5s_infinite]">
+    <a href="#about" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-blue-600 text-3xl animate-bounce">
       <i class="fas fa-arrow-down"></i>
     </a>
   </header>
 
-<!-- ✅ ABOUT SECTION -->
-<section id="about" class="py-5 bg-white text-dark">
-  <div class="container">
-    <div class="row align-items-center">
+  <!-- ✅ ABOUT -->
+  <section id="about" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 px-6" data-aos="fade-up">
+      
+      <!-- Left -->
+      <div class="bg-white p-8 rounded-2xl shadow-md">
+        <h3 class="text-2xl font-bold mb-3 text-gold"><i class="fas fa-user mr-2"></i>About Sam & The Brand</h3>
+        <p class="text-gray-600 mb-6">
+          Sam’s Media & Images is a premium creative studio that adds a luxurious touch to your brand. 
+          We specialize in photography, media production, and exclusive art programs designed to discover and develop creative talent.
+        </p>
 
-      <!-- LEFT CONTENT -->
-      <div class="col-lg-7 mb-4">
-        <div class="p-4 border rounded shadow-sm bg-white">
-          <h3 class="text-gold font-weight-bold mb-3">
-            <i class="fas fa-user mr-2"></i>About Sam & The Brand
-          </h3>
-          <p class="text-muted">
-            Sam's Media & Images is a premium creative studio that adds a unique, luxurious touch to your brand. 
-            We specialize in photography, media production, film features, reviews, and exclusive art programs 
-            designed to discover and develop hidden talents.
-          </p>
+        <div class="grid sm:grid-cols-2 gap-4 text-gray-700">
+          <div><i class="fas fa-id-card text-gold mr-2"></i> Sam KE (The Duke of Kithi)</div>
+          <div><i class="fas fa-map-marker-alt text-gold mr-2"></i> Kenya — Remote & Online</div>
+          <div><i class="fas fa-calendar-check text-gold mr-2"></i> Flexible Availability</div>
+          <div><i class="fas fa-envelope text-gold mr-2"></i> info@samsmedia.ke</div>
+        </div>
 
-          <div class="row mt-4">
-            <div class="col-md-6 mb-3">
-              <h6 class="text-dark mb-1"><i class="fas fa-id-card mr-2 text-gold"></i>Name</h6>
-              <p class="text-muted mb-0">Sam KE (The Duke of Kithi)</p>
-            </div>
-            <div class="col-md-6 mb-3">
-              <h6 class="text-dark mb-1"><i class="fas fa-map-marker-alt mr-2 text-gold"></i>Based In</h6>
-              <p class="text-muted mb-0">Kenya — Remote & Online Classes</p>
-            </div>
-            <div class="col-md-6 mb-3">
-              <h6 class="text-dark mb-1"><i class="fas fa-calendar-check mr-2 text-gold"></i>Availability</h6>
-              <p class="text-muted mb-0">Flexible · Online Basis</p>
-            </div>
-            <div class="col-md-6 mb-3">
-              <h6 class="text-dark mb-1"><i class="fas fa-envelope mr-2 text-gold"></i>Contact</h6>
-              <p class="text-muted mb-0">info@samsmedia.ke · +254 7XX XXX XXX</p>
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <a href="#contact" class="btn btn-gold text-dark mr-2">Book a Class</a>
-            <a href="#gallery" class="btn btn-outline-primary">View Portfolio</a>
-          </div>
+        <div class="mt-6 space-x-3">
+          <a href="#contact" class="btn-gold text-black px-5 py-2 rounded-md font-semibold">Book a Class</a>
+          <a href="#gallery" class="border border-blue-600 text-blue-600 px-5 py-2 rounded-md font-semibold hover:bg-blue-600 hover:text-white transition">View Portfolio</a>
         </div>
       </div>
 
-      <!-- RIGHT PROFILE CARD -->
-      <div class="col-lg-5">
-        <div class="p-4 text-center border rounded shadow-sm bg-white">
-          <img src="img/sam-logo.jpg" alt="Sam KE" class="rounded-circle mb-3 shadow-sm" style="width:140px; height:140px; object-fit:cover;">
-          
-          <h5 class="text-gold mb-1">Sam KE</h5>
-          <p class="text-muted">The Duke of Kithi</p>
-
-          <div class="text-left mt-3">
-            <h6 class="text-dark"><i class="fas fa-star mr-2 text-gold"></i>What We Do</h6>
-            <ul class="text-muted mt-2 pl-3">
-              <li> Premium Photography & Media Production</li>
-              <li> Entertainment Reviews & Feature Production</li>
-              <li> Exclusive Art Programs — Pencil, Paint, Calligraphy</li>
-              <li>Talent Discovery & Mentorship</li>
-            </ul>
-          </div>
-        </div>
+      <!-- Right -->
+      <div class="bg-white p-8 text-center rounded-2xl shadow-md">
+        <img src="img/sam-logo.jpg" alt="Sam KE" class="w-36 h-36 mx-auto rounded-full shadow-lg mb-4 object-cover">
+        <h4 class="text-gold font-semibold text-lg">Sam KE</h4>
+        <p class="text-gray-500 mb-4">The Duke of Kithi</p>
+        <ul class="text-gray-600 text-left inline-block space-y-2">
+          <li>⭐ Premium Photography & Media</li>
+          <li>⭐ Entertainment Reviews</li>
+          <li>⭐ Art Programs — Pencil, Paint, Calligraphy</li>
+          <li>⭐ Talent Discovery & Mentorship</li>
+        </ul>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PROGRAMS / SERVICES -->
-<section id="programs" class="py-5 bg-white text-dark">
-  <div class="container">
+  <!-- ✅ PROGRAMS -->
+  <section id="programs" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6 text-center" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-blue-600 mb-3">Our Premium Programs</h2>
+      <p class="text-gray-600 mb-12">Flexible · Online · Discover Your Creative Excellence</p>
 
-    <!-- Title + Subtitle -->
-    <div class="text-center mb-5">
-      <h2 class="font-weight-bold text-primary">Our Premium Programs</h2>
-      <p class="text-muted">Flexible · Online · Elevate Your Hidden Talents</p>
-    </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <i class="fas fa-pencil-alt text-gold text-3xl mb-4"></i>
+          <h5 class="font-semibold mb-2">Pencil Classes</h5>
+          <p class="text-gray-600 text-sm">Realistic sketching & shading, from beginner to pro.</p>
+        </div>
 
-    <!-- Services Grid -->
-    <div class="row g-4">
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <i class="fas fa-paint-brush text-gold text-3xl mb-4"></i>
+          <h5 class="font-semibold mb-2">Painting Classes</h5>
+          <p class="text-gray-600 text-sm">Master acrylics, watercolor & color theory.</p>
+        </div>
 
-      <!-- Service Card -->
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card p-4 border rounded shadow-sm h-100">
-          <div class="icon mb-3"><i class="fas fa-pencil-alt"></i></div>
-          <h5 class="text-dark font-weight-bold">Pencil Classes</h5>
-          <p class="text-muted small">Learn realistic sketching, shading, and fundamentals from beginner to pro level.</p>
+        <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+          <i class="fas fa-pen-fancy text-gold text-3xl mb-4"></i>
+          <h5 class="font-semibold mb-2">Calligraphy Writing</h5>
+          <p class="text-gray-600 text-sm">Modern & classical lettering styles and branding.</p>
         </div>
       </div>
 
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card p-4 border rounded shadow-sm h-100">
-          <div class="icon mb-3"><i class="fas fa-paint-brush"></i></div>
-          <h5 class="text-dark font-weight-bold">Painting Classes</h5>
-          <p class="text-muted small">Master acrylic & watercolor techniques, color theory, and canvas creations.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card p-4 border rounded shadow-sm h-100">
-          <div class="icon mb-3"><i class="fas fa-pen-fancy"></i></div>
-          <h5 class="text-dark font-weight-bold">Calligraphy Writing</h5>
-          <p class="text-muted small">Modern & classical letter forms, premium tools, branding calligraphy styles.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card p-4 border rounded shadow-sm h-100">
-          <div class="icon mb-3"><i class="fas fa-image"></i></div>
-          <h5 class="text-dark font-weight-bold">Media & Editing</h5>
-          <p class="text-muted small">Photo enhancement, professional video editing & visual branding content.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card p-4 border rounded shadow-sm h-100">
-          <div class="icon mb-3"><i class="fas fa-camera-retro"></i></div>
-          <h5 class="text-dark font-weight-bold">Event Photography</h5>
-          <p class="text-muted small">Creative photography, candid moments, portraits & artistic event coverage.</p>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6">
-        <div class="service-card p-4 border rounded shadow-sm h-100">
-          <div class="icon mb-3"><i class="fas fa-star"></i></div>
-          <h5 class="text-dark font-weight-bold">Reviews & Features</h5>
-          <p class="text-muted small">Editorials, features, and storytelling to highlight talents & masterpieces.</p>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Call-to-Action Buttons -->
-    <div class="text-center mt-5">
-      <a href="#contact" class="btn btn-primary px-4 py-2 mr-2">Enroll Now</a>
-      <a href="#gallery" class="btn btn-outline-dark px-4 py-2">View Gallery</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- WHY CHOOSE US -->
-<section id="why-us" class="py-5 bg-white">
-  <div class="container text-center" data-aos="fade-up">
-    <h2 class="text-primary font-weight-bold mb-4">Why Choose Us</h2>
-    <div class="row">
-      <div class="col-md-4 mb-4">
-        <i class="fas fa-clock fa-2x" style="color:#c9a227;"></i>
-        <h5 class="mt-3 text-dark">Flexible Schedule</h5>
-        <p class="text-muted small">Morning, evening, or weekend — we fit your lifestyle.</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <i class="fas fa-globe fa-2x" style="color:#c9a227;"></i>
-        <h5 class="mt-3 text-dark">100% Online</h5>
-        <p class="text-muted small">Attend from anywhere — live lessons and recorded content.</p>
-      </div>
-      <div class="col-md-4 mb-4">
-        <i class="fas fa-chalkboard-teacher fa-2x" style="color:#c9a227;"></i>
-        <h5 class="mt-3 text-dark">Expert Mentorship</h5>
-        <p class="text-muted small">Guidance to discover and elevate your creative potential.</p>
+      <div class="mt-12">
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition">Enroll Now</a>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- GALLERY -->
-<section id="gallery" class="py-5 bg-light">
-  <div class="container" data-aos="fade-up">
-    <h3 class="text-primary font-weight-bold mb-2">Portfolio & Featured Work</h3>
-    <p class="text-muted mb-4">Selected artwork, photography, and digital creations.</p>
-
-    <div class="row">
-      <div class="col-md-4 mb-4" data-aos="zoom-in">
-        <img src="img/portfolio-1.jpg" class="img-fluid rounded shadow-sm hover-scale" alt="portfolio 1">
+  <!-- ✅ WHY CHOOSE US -->
+  <section id="why-us" class="py-16 bg-white text-center" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-blue-600 mb-8">Why Choose Us</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div>
+        <i class="fas fa-clock text-gold text-4xl mb-4"></i>
+        <h5 class="font-semibold mb-2">Flexible Schedule</h5>
+        <p class="text-gray-600 text-sm">Morning, evening, or weekend — we fit your lifestyle.</p>
       </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="150">
-        <img src="img/portfolio-2.jpg" class="img-fluid rounded shadow-sm hover-scale" alt="portfolio 2">
+      <div>
+        <i class="fas fa-globe text-gold text-4xl mb-4"></i>
+        <h5 class="font-semibold mb-2">100% Online</h5>
+        <p class="text-gray-600 text-sm">Attend from anywhere, live or recorded sessions.</p>
       </div>
-      <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
-        <img src="img/portfolio-3.jpg" class="img-fluid rounded shadow-sm hover-scale" alt="portfolio 3">
+      <div>
+        <i class="fas fa-chalkboard-teacher text-gold text-4xl mb-4"></i>
+        <h5 class="font-semibold mb-2">Expert Mentorship</h5>
+        <p class="text-gray-600 text-sm">Personalized guidance to grow your creative skills.</p>
       </div>
     </div>
+  </section>
 
-    <a href="#" class="btn btn-outline-primary mt-3">View More</a>
-  </div>
-</section>
+  <!-- ✅ GALLERY -->
+  <section id="gallery" class="py-16 bg-gray-50" data-aos="fade-up">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold text-blue-600 mb-3">Portfolio & Featured Work</h3>
+      <p class="text-gray-600 mb-8">Selected artwork, photography, and creative media.</p>
 
-<!-- CONTACT -->
-<section id="contact" class="py-5 bg-white">
-  <div class="container">
-    <div class="row">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <img src="img/portfolio-1.jpg" class="rounded-lg shadow hover-scale" alt="">
+        <img src="img/portfolio-2.jpg" class="rounded-lg shadow hover-scale" alt="">
+        <img src="img/portfolio-3.jpg" class="rounded-lg shadow hover-scale" alt="">
+      </div>
 
+      <a href="#" class="mt-8 inline-block border border-blue-600 text-blue-600 px-6 py-2 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition">View More</a>
+    </div>
+  </section>
+
+  <!-- ✅ CONTACT -->
+  <section id="contact" class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 px-6" data-aos="fade-up">
+      
       <!-- Form -->
-      <div class="col-lg-6 mb-4" data-aos="fade-right">
-        <div class="p-4 border rounded shadow-sm">
-          <h4 class="text-primary font-weight-bold">Get In Touch / Enroll</h4>
-          <p class="text-muted small">Fill in your details to contact or enroll.</p>
-
-          <form>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="text" class="form-control" placeholder="Full Name" required>
-              </div>
-              <div class="form-group col-md-6">
-                <input type="email" class="form-control" placeholder="Email" required>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <input type="tel" class="form-control" placeholder="Phone">
-              </div>
-              <div class="form-group col-md-6">
-                <select class="form-control">
-                  <option>Pencil Classes</option>
-                  <option>Painting Classes</option>
-                  <option>Calligraphy</option>
-                  <option>Media Services</option>
-                </select>
-              </div>
-            </div>
-
-            <textarea class="form-control mb-3" rows="3" placeholder="Message..."></textarea>
-            <button type="submit" class="btn btn-primary text-white">Send Message</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- QR Code -->
-      <div class="col-lg-6 text-center" data-aos="fade-left">
-        <div class="p-4 border rounded shadow-sm">
-          <h5 class="text-primary font-weight-bold">Scan to Join</h5>
-          <img src="img/sam-logo.jpg" alt="QR Code" class="mt-3 rounded shadow" style="width:220px;">
-          <p class="text-muted small mt-3">Remote lessons, payments & contact via WhatsApp group.</p>
-
-          <div>
-            <a class="btn btn-outline-primary btn-sm mr-2" href="#"><i class="fab fa-instagram"></i></a>
-            <a class="btn btn-outline-primary btn-sm mr-2" href="#"><i class="fab fa-youtube"></i></a>
-            <a class="btn btn-outline-primary btn-sm mr-2" href="#"><i class="fab fa-facebook"></i></a>
-            <a class="btn btn-outline-primary btn-sm" href="#"><i class="fab fa-x-twitter"></i></a>
+      <div class="bg-white p-8 rounded-2xl shadow">
+        <h4 class="text-2xl font-bold text-blue-600 mb-4">Get In Touch / Enroll</h4>
+        <form class="space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="text" placeholder="Full Name" class="border rounded-md px-4 py-2 w-full">
+            <input type="email" placeholder="Email" class="border rounded-md px-4 py-2 w-full">
           </div>
+          <div class="grid sm:grid-cols-2 gap-4">
+            <input type="tel" placeholder="Phone" class="border rounded-md px-4 py-2 w-full">
+            <select class="border rounded-md px-4 py-2 w-full">
+              <option>Pencil Classes</option>
+              <option>Painting Classes</option>
+              <option>Calligraphy</option>
+              <option>Media Services</option>
+            </select>
+          </div>
+          <textarea rows="3" placeholder="Message..." class="border rounded-md px-4 py-2 w-full"></textarea>
+          <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition">Send Message</button>
+        </form>
+      </div>
+
+      <!-- QR Code / Socials -->
+      <div class="bg-white p-8 text-center rounded-2xl shadow">
+        <h5 class="text-blue-600 font-semibold mb-4">Scan to Join</h5>
+        <img src="img/sam-logo.jpg" alt="QR" class="w-52 mx-auto rounded-lg shadow mb-4">
+        <p class="text-gray-600 text-sm mb-4">Join our online group for updates & lessons.</p>
+        <div class="flex justify-center space-x-3">
+          <a href="#" class="text-blue-600 hover:text-gold text-xl"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="text-blue-600 hover:text-gold text-xl"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="text-blue-600 hover:text-gold text-xl"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-blue-600 hover:text-gold text-xl"><i class="fab fa-x-twitter"></i></a>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
-   <!-- Footer Start -->
-<div class="container-fluid bg-primary text-white mt-5 py-5 px-sm-3 px-md-5">
-  <div class="container text-center py-5">
+  <script>
+    // Animate on Scroll
+    AOS.init({ duration: 1000, once: true });
 
-    <!-- Social Media Icons -->
-    <div class="d-flex justify-content-center mb-4">
-      <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-      <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-      <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
-      <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+    // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Word Rotator
+    const words = ["Luxury Media", "Art & Imagination", "Creative Excellence", "The Duke Experience"];
+    let index = 0;
+    const changingText = document.getElementById('changing-text');
+    setInterval(() => {
+      index = (index + 1) % words.length;
+      changingText.textContent = words[index];
+    }, 2500);
+  </script>
+  
+<!-- ✅ Modern Tailwind Footer -->
+<footer class="bg-blue-700 text-white py-10 mt-10">
+  <div class="max-w-7xl mx-auto text-center px-6">
+
+    <!-- 🌐 Social Media Icons -->
+    <div class="flex justify-center gap-4 mb-6">
+      <a href="#" class="p-3 bg-white/10 hover:bg-white/20 rounded-full transition transform hover:scale-110">
+        <i class="fab fa-twitter text-white text-xl"></i>
+      </a>
+      <a href="#" class="p-3 bg-white/10 hover:bg-white/20 rounded-full transition transform hover:scale-110">
+        <i class="fab fa-facebook-f text-white text-xl"></i>
+      </a>
+      <a href="#" class="p-3 bg-white/10 hover:bg-white/20 rounded-full transition transform hover:scale-110">
+        <i class="fab fa-linkedin-in text-white text-xl"></i>
+      </a>
+      <a href="#" class="p-3 bg-white/10 hover:bg-white/20 rounded-full transition transform hover:scale-110">
+        <i class="fab fa-instagram text-white text-xl"></i>
+      </a>
     </div>
 
-    <!-- Footer Links -->
-    <div class="d-flex justify-content-center mb-3">
-      <a class="text-white" href="#">Privacy</a>
-      <span class="px-3">|</span>
-      <a class="text-white" href="#">Terms</a>
-      <span class="px-3">|</span>
-      <a class="text-white" href="#">FAQs</a>
-      <span class="px-3">|</span>
-      <a class="text-white" href="#">Help</a>
+    <!-- 📜 Footer Links -->
+    <div class="flex justify-center flex-wrap gap-4 text-sm mb-6">
+      <a href="#" class="hover:text-gray-200 transition">Privacy</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-gray-200 transition">Terms</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-gray-200 transition">FAQs</a>
+      <span class="text-gray-300">|</span>
+      <a href="#" class="hover:text-gray-200 transition">Help</a>
     </div>
 
-    <!-- Copyright & Info -->
-    <p class="m-0">
-      &copy; <span class="text-white font-weight-bold">Sam's Media — Sam KE · The Duke of Kithi</span>. All Rights Reserved.
+    <!-- 📅 Copyright -->
+    <p class="text-sm mb-2">
+      &copy; <span class="font-semibold">Sam’s Media — Sam KE · The Duke of Kithi</span>. All Rights Reserved.
     </p>
 
-    <small class="d-block small-muted">
-      Designed with care · Flexible & Online · For bookings:
-      <a href="mailto:info@samsmedia.ke" class="text-white">info@samsmedia.ke</a>
-    </small>
-
-    <p class="m-0 mt-2">
-      Designed by <a class="text-white font-weight-bold" href="https://antocapteknologies.com" target="_blank">Antocap Teknologies</a>
+    <p class="text-xs text-gray-200 mb-2">
+      Designed with care · Flexible & Online · For bookings: 
+      <a href="mailto:info@samsmedia.ke" class="text-white underline hover:text-gray-200">info@samsmedia.ke</a>
     </p>
 
+    <!-- 💻 Designer Credit -->
+    <p class="text-xs">
+      Designed by 
+      <a href="https://antocapteknologies.com" target="_blank" class="font-semibold hover:text-gray-200 transition">
+        Antocap Teknologies
+      </a>
+    </p>
   </div>
-</div>
-<!-- Footer End -->
+</footer>
 
-<!-- Scroll to Bottom -->
-<i class="fa fa-2x fa-angle-down text-white scroll-to-bottom"></i>
+<!-- 🌙 Scroll to Bottom Button -->
+<button 
+  id="scroll-to-bottom"
+  class="fixed bottom-20 left-1/2 -translate-x-1/2 bg-blue-600 hover:bg-blue-700 text-white text-2xl p-3 rounded-full shadow-lg transition transform hover:scale-110 animate-bounce z-50"
+  aria-label="Scroll to Bottom"
+>
+  <i class="fa fa-angle-down"></i>
+</button>
 
-<!-- Back to Top -->
-<a href="#" class="btn btn-outline-dark px-0 back-to-top">
+<!-- ☀️ Back to Top Button -->
+<button 
+  id="back-to-top"
+  class="hidden fixed bottom-6 right-6 bg-white text-blue-700 border border-blue-700 hover:bg-blue-700 hover:text-white text-xl p-3 rounded-full shadow-lg transition transform hover:scale-110 z-50"
+  aria-label="Back to Top"
+>
   <i class="fa fa-angle-double-up"></i>
-</a>
-    <!-- JavaScript Libraries -->
+</button>
+
+<!-- ✨ JavaScript for Smooth Scroll -->
+<script>
+  // Scroll to Bottom
+  document.getElementById("scroll-to-bottom").addEventListener("click", () => {
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+  });
+
+  // Back to Top Visibility + Scroll
+  const backToTop = document.getElementById("back-to-top");
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 400) {
+      backToTop.classList.remove("hidden");
+    } else {
+      backToTop.classList.add("hidden");
+    }
+  });
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
+  
+    <!-- JavaScript Libraries 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -419,10 +378,10 @@
 
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+    <script src="js/main.js"></script>-->
 </body>
 </html>
+
 
 
 
