@@ -41,35 +41,52 @@
 <body class="bg-white text-gray-900 antialiased overflow-x-hidden">
 
   <!-- ✅ NAVBAR -->
-  <nav class="fixed top-0 left-0 w-full z-50 bg-black/90 backdrop-blur-md shadow-md">
-    <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-      <a href="#home" class="text-white font-semibold text-lg tracking-wide hover:text-gold transition">Sam’s Media & Images</a>
-      <button id="menu-btn" class="lg:hidden text-white text-2xl"><i class="fas fa-bars"></i></button>
-
-      <ul id="menu" class="hidden lg:flex space-x-8 text-white">
-        <li><a href="#home" class="hover:text-gold transition">Home</a></li>
-        <li><a href="#about" class="hover:text-gold transition">About</a></li>
-        <li><a href="#programs" class="hover:text-gold transition">Programs</a></li>
-        <li><a href="#gallery" class="hover:text-gold transition">Portfolio</a></li>
-        <li><a href="#contact" class="hover:text-gold transition">Contact</a></li>
-        <li>
-          <a href="#contact" class="ml-4 bg-gold text-black px-5 py-2 rounded-lg font-semibold hover:bg-yellow-500 transition">
-            Book a Class
-          </a>
-        </li>
-      </ul>
+<!-- ✅ NAVBAR -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400 shadow-lg backdrop-blur-md">
+  <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-3">
+    
+    <!-- Logo + Brand -->
+    <div class="flex items-center space-x-3">
+      <img src="img/sam-logo.jpg" alt="Sam KE Logo" class="w-12 h-12 rounded-full object-cover shadow-sm">
+      <a href="#home" class="text-white font-bold text-xl tracking-wide hover:text-yellow-400 transition">Sam’s Media & Images</a>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden flex-col bg-black text-white space-y-4 py-4 px-6 lg:hidden">
-      <a href="#home" class="hover:text-gold">Home</a>
-      <a href="#about" class="hover:text-gold">About</a>
-      <a href="#programs" class="hover:text-gold">Programs</a>
-      <a href="#gallery" class="hover:text-gold">Portfolio</a>
-      <a href="#contact" class="hover:text-gold">Contact</a>
-      <a href="#contact" class="bg-gold text-black text-center py-2 rounded-lg hover:bg-yellow-500 transition">Book a Class</a>
-    </div>
-  </nav>
+    <!-- Desktop Menu -->
+    <ul class="hidden lg:flex space-x-8 text-white font-semibold">
+      <li><a href="#home" class="nav-link hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="#about" class="nav-link hover:text-yellow-400 transition">About</a></li>
+      <li><a href="#programs" class="nav-link hover:text-yellow-400 transition">Programs</a></li>
+      <li><a href="#gallery" class="nav-link hover:text-yellow-400 transition">Portfolio</a></li>
+      <li><a href="#contact" class="nav-link hover:text-yellow-400 transition">Contact</a></li>
+      <li>
+        <a href="#contact" class="ml-4 bg-white text-black px-5 py-2 rounded-lg font-semibold hover:bg-gray-200 transition">
+          Book a Class
+        </a>
+      </li>
+    </ul>
+
+    <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+      <i class="fas fa-bars"></i>
+    </button>
+  </div>
+
+  <!-- Mobile Menu (Sliding from Top) -->
+  <div id="mobile-menu" class="hidden bg-blue-500 text-white w-full lg:hidden shadow-lg">
+    <ul class="flex flex-col space-y-4 py-6 px-6 font-semibold">
+      <li><a href="#home" class="block nav-link hover:text-yellow-400 transition">Home</a></li>
+      <li><a href="#about" class="block nav-link hover:text-yellow-400 transition">About</a></li>
+      <li><a href="#programs" class="block nav-link hover:text-yellow-400 transition">Programs</a></li>
+      <li><a href="#gallery" class="block nav-link hover:text-yellow-400 transition">Portfolio</a></li>
+      <li><a href="#contact" class="block nav-link hover:text-yellow-400 transition">Contact</a></li>
+      <li>
+        <a href="#contact" class="block bg-white text-black text-center py-2 rounded-lg hover:bg-gray-200 transition">
+          Book a Class
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
 
   <!-- ✅ HERO -->
   <header id="home" class="relative flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen px-6 lg:px-20 pt-28 bg-gradient-to-br from-white via-gray-100 to-blue-50">
@@ -320,6 +337,7 @@
 <script src="js/main.js"></script>-->
 </body>
 </html>
+
 
 
 
