@@ -30,13 +30,27 @@ AOS.init({
 
 
 // ==============================
-// ✅ MOBILE MENU TOGGLER
+// ✅ MOBILE MENU TOGGLER + CLOSE ON OUTSIDE CLICK
 // ==============================
 const menuBtn = document.getElementById('menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
+const menuClose = document.getElementById('menu-close');
 
+// Open mobile menu
 menuBtn.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden');
+  mobileMenu.classList.remove('hidden');
+});
+
+// Close mobile menu with X button
+menuClose.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
+});
+
+// Close mobile menu when clicking outside
+window.addEventListener('click', (e) => {
+  if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+    mobileMenu.classList.add('hidden');
+  }
 });
 
 
@@ -93,3 +107,4 @@ window.addEventListener("scroll", () => {
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
