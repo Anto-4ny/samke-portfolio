@@ -90,15 +90,15 @@
 <!-- ✅ HERO SECTION -->
 <header id="home" class="relative flex flex-col-reverse lg:flex-row items-center justify-between min-h-screen px-6 lg:px-20 pt-24 bg-gradient-to-br from-white via-gray-100 to-blue-50">
 
-  <!-- Carousel Section -->
-  <div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end mb-10 lg:mb-0 overflow-hidden rounded-2xl shadow-xl" data-aos="fade-left">
-    
-    <img src="img/hero.png" alt="Sam KE Logo" class="carousel-image absolute inset-0 w-full h-[400px] sm:h-[500px] lg:h-[450px] object-cover rounded-2xl border-2 border-black transition-transform duration-500">
-    <img src="img/hero2.jpg" alt="Hero 2" class="carousel-image absolute inset-0 w-full h-[400px] sm:h-[500px] lg:h-[450px] object-cover rounded-2xl border-2 border-black transition-transform duration-500 hidden">
-    <img src="img/hero3.jpeg" alt="Hero 3" class="carousel-image absolute inset-0 w-full h-[400px] sm:h-[500px] lg:h-[450px] object-cover rounded-2xl border-2 border-black transition-transform duration-500 hidden">
-    <img src="img/hero4.jpg" alt="Hero 4" class="carousel-image absolute inset-0 w-full h-[400px] sm:h-[500px] lg:h-[450px] object-cover rounded-2xl border-2 border-black transition-transform duration-500 hidden">
+<!-- Carousel Section -->
+<div class="w-full lg:w-1/2 relative flex justify-center lg:justify-end mb-10 lg:mb-0 overflow-hidden rounded-2xl shadow-xl h-[400px] sm:h-[500px] lg:h-[450px]" data-aos="fade-left">
+  
+  <img src="img/hero.png" class="carousel-image absolute inset-0 w-full h-full object-cover rounded-2xl border-2 border-black transition-opacity duration-1000 opacity-100" />
+  <img src="img/hero2.jpg" class="carousel-image absolute inset-0 w-full h-full object-cover rounded-2xl border-2 border-black transition-opacity duration-1000 opacity-0" />
+  <img src="img/hero3.jpeg" class="carousel-image absolute inset-0 w-full h-full object-cover rounded-2xl border-2 border-black transition-opacity duration-1000 opacity-0" />
+  <img src="img/hero4.jpg" class="carousel-image absolute inset-0 w-full h-full object-cover rounded-2xl border-2 border-black transition-opacity duration-1000 opacity-0" />
 
-  </div>
+</div>
 
   <!-- Text Section -->
   <div class="w-full lg:w-1/2 text-center lg:text-left max-w-xl space-y-6 lg:pr-10" data-aos="fade-right">
@@ -139,14 +139,19 @@
 
 <!-- ✅ Carousel Script -->
 <script>
-  const images = document.querySelectorAll('.carousel-image');
-  let current = 0;
+const images = document.querySelectorAll('.carousel-image');
+let current = 0;
 
-  setInterval(() => {
-    images[current].classList.add('hidden'); // hide current
-    current = (current + 1) % images.length;
-    images[current].classList.remove('hidden'); // show next
-  }, 3000); // change every 3 seconds
+setInterval(() => {
+  images.forEach((img, i) => {
+    img.classList.remove('opacity-100');
+    img.classList.add('opacity-0');
+  });
+  images[current].classList.remove('opacity-0');
+  images[current].classList.add('opacity-100');
+
+  current = (current + 1) % images.length;
+}, 3000);
 </script>
 
   <!-- ✅ ABOUT -->
@@ -365,6 +370,7 @@
 <script src="js/main.js"></script>-->
 </body>
 </html>
+
 
 
 
