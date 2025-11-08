@@ -2,27 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>Sam's Media & Images — Sam KE</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <meta name="description" content="Sam's Media & Images — Production company, art classes, media & reviews. Sam KE (The Duke of Kithi)." />
+  <title>Sam's Media & Images — Sam KE | Premium Photography & Art Classes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  
+  <!-- Primary Meta Tags -->
+  <meta name="description" content="Sam's Media & Images — Premium creative studio for photography, media production, and art classes. Online and flexible programs with Sam KE (The Duke of Kithi)." />
+  <meta name="keywords" content="Sam KE, Sam's Media, Photography, Art Classes, Online Media Courses, Creative Programs, Calligraphy, Painting, Pencil Classes, Media Production, Online Art Lessons, Premium Media Studio, Kenya Art Classes" />
+  <meta name="author" content="Sam KE | Sam's Media & Images" />
+  <meta name="robots" content="index, follow" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Sam's Media & Images — Sam KE | Premium Photography & Art Classes" />
+  <meta property="og:description" content="Sam's Media & Images offers premium creative services and online art programs by Sam KE (The Duke of Kithi)." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.samsmedia.ke/" />
+  <meta property="og:image" content="https://www.samsmedia.ke/img/sam-logo.jpg" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sam's Media & Images — Sam KE | Premium Photography & Art Classes" />
+  <meta name="twitter:description" content="Premium creative studio for photography, media production, and online art classes with Sam KE (The Duke of Kithi)." />
+  <meta name="twitter:image" content="https://www.samsmedia.ke/img/sam-logo.jpg" />
+  
+  <!-- Favicon -->
+  <link rel="icon" href="img/sam-logo.jpg" type="image/jpg" />
+  
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-<!-- ✅ Font Awesome (no integrity conflict, no domain restriction) -->
-<link 
-  rel="stylesheet" 
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
-  referrerpolicy="no-referrer"
-/>
+  <!-- Font Awesome -->
+  <link 
+    rel="stylesheet" 
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" 
+    referrerpolicy="no-referrer"
+  />
 
   <!-- AOS (Animate on Scroll) -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+  <!-- Custom Styles -->
   <style>
     body { font-family: 'Poppins', sans-serif; }
     .text-gold { color: #c9a227; }
@@ -37,7 +59,7 @@
     .hover-scale:hover { transform: scale(1.05); }
   </style>
 </head>
-
+  
 <body class="bg-white text-gray-900 antialiased overflow-x-hidden">
 
 <!-- ✅ NAVBAR -->
@@ -136,23 +158,6 @@
     <i class="fas fa-arrow-down"></i>
   </a>
 </div>
-
-<!-- ✅ Carousel Script -->
-<script>
-const images = document.querySelectorAll('.carousel-image');
-let current = 0;
-
-setInterval(() => {
-  images.forEach((img, i) => {
-    img.classList.remove('opacity-100');
-    img.classList.add('opacity-0');
-  });
-  images[current].classList.remove('opacity-0');
-  images[current].classList.add('opacity-100');
-
-  current = (current + 1) % images.length;
-}, 3000);
-</script>
 
 <!-- ✅ ABOUT SECTION -->
 <section id="about" class="py-20 bg-white">
@@ -384,6 +389,7 @@ setInterval(() => {
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
