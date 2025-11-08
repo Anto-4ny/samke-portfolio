@@ -256,27 +256,6 @@
 
     </div>
   </section>
-
-  <script>
-    // Animate on Scroll
-    AOS.init({ duration: 1000, once: true });
-
-    // Mobile Menu Toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Word Rotator
-    const words = ["Luxury Media", "Art & Imagination", "Creative Excellence", "The Duke Experience"];
-    let index = 0;
-    const changingText = document.getElementById('changing-text');
-    setInterval(() => {
-      index = (index + 1) % words.length;
-      changingText.textContent = words[index];
-    }, 2500);
-  </script>
   
 <!-- ✅ Modern Tailwind Footer -->
 <footer class="bg-blue-700 text-white py-10 mt-10">
@@ -341,6 +320,7 @@
 <script src="js/main.js"></script>-->
 </body>
 </html>
+
 
 
 
