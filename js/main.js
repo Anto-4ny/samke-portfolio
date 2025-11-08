@@ -1,54 +1,6 @@
 (function ($) {
     "use strict";
 
-// ✅ Smooth Scrolling + Active Link
-$(".navbar-nav a").on('click', function (e) {
-    if (this.hash !== "") {
-        e.preventDefault();
-        $('html, body').animate({
-            scrollTop: $(this.hash).offset().top - 70
-        }, 800);
-        $('.nav-link').removeClass('active');
-        $(this).addClass('active');
-        $('.navbar-collapse').collapse('hide'); // Auto-close after clicking link
-    }
-});
-
-// ✅ Toggle menu open/close when clicking outside
-$(document).click(function (e) {
-    if (!$(e.target).closest('.navbar').length) {
-        $('.navbar-collapse').collapse('hide');
-    }
-});
-
-
-// Typed.js Effect
-if ($('.typed-text-output').length == 1) {
-    var typed_strings = $('.typed-text').text();
-    new Typed('.typed-text-output', {
-        strings: typed_strings.split(', '),
-        typeSpeed: 90,
-        backSpeed: 30,
-        loop: true
-    });
-}
-
-// Scroll to Bottom Icon Visibility
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-        $('.scroll-to-bottom').fadeOut('slow');
-    } else {
-        $('.scroll-to-bottom').fadeIn('slow');
-    }
-});
-
-    // Skills
-    $('.skill').waypoint(function () {
-        $('.progress .progress-bar').each(function () {
-            $(this).css("width", $(this).attr("aria-valuenow") + '%');
-        });
-    }, {offset: '80%'});
-
 
     // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
@@ -93,9 +45,19 @@ $(window).scroll(function () {
     once: true
   });
 
-const words = ["Luxury Media", "Premium Images", "Elite Visuals"];
-let i = 0;
-setInterval(() => {
-  document.getElementById("changing-text").innerText = words[i];
-  i = (i + 1) % words.length;
-}, 2500);
+  // Mobile Menu Toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Word Rotator
+    const words = ["Luxury Media", "Art & Imagination", "Creative Excellence", "The Duke Experience"];
+    let index = 0;
+    const changingText = document.getElementById('changing-text');
+    setInterval(() => {
+      index = (index + 1) % words.length;
+      changingText.textContent = words[index];
+    }, 2500);
+
