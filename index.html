@@ -86,27 +86,33 @@
       </li>
     </ul>
 
-    <!-- Mobile Hamburger -->
-    <button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
-      <i class="fas fa-bars"></i>
+<!-- Mobile Hamburger -->
+<button id="menu-btn" class="lg:hidden text-white text-2xl focus:outline-none">
+  <i class="fas fa-bars"></i>
+</button>
+
+<!-- Mobile Menu (Sliding from Top) -->
+<div id="mobile-menu" class="hidden fixed inset-0 bg-blue-500 text-white z-40 shadow-lg">
+  <!-- Close Button -->
+  <div class="flex justify-end p-4">
+    <button id="menu-close" class="text-white text-3xl focus:outline-none">
+      <i class="fas fa-times"></i>
     </button>
   </div>
 
-  <!-- Mobile Menu (Sliding from Top) -->
-  <div id="mobile-menu" class="hidden bg-blue-500 text-white w-full lg:hidden shadow-lg">
-    <ul class="flex flex-col space-y-4 py-6 px-6 font-semibold">
-      <li><a href="#home" class="block nav-link hover:text-yellow-400 transition">Home</a></li>
-      <li><a href="#about" class="block nav-link hover:text-yellow-400 transition">About</a></li>
-      <li><a href="#programs" class="block nav-link hover:text-yellow-400 transition">Programs</a></li>
-      <li><a href="#gallery" class="block nav-link hover:text-yellow-400 transition">Portfolio</a></li>
-      <li><a href="#contact" class="block nav-link hover:text-yellow-400 transition">Contact</a></li>
-      <li>
-        <a href="#contact" class="block bg-white text-black text-center py-2 rounded-lg hover:bg-gray-200 transition">
-          Book a Class
-        </a>
-      </li>
-    </ul>
-  </div>
+  <ul class="flex flex-col space-y-4 py-6 px-6 font-semibold">
+    <li><a href="#home" class="block nav-link hover:text-yellow-400 transition">Home</a></li>
+    <li><a href="#about" class="block nav-link hover:text-yellow-400 transition">About</a></li>
+    <li><a href="#programs" class="block nav-link hover:text-yellow-400 transition">Programs</a></li>
+    <li><a href="#gallery" class="block nav-link hover:text-yellow-400 transition">Portfolio</a></li>
+    <li><a href="#contact" class="block nav-link hover:text-yellow-400 transition">Contact</a></li>
+    <li>
+      <a href="#contact" class="block bg-white text-black text-center py-2 rounded-lg hover:bg-gray-200 transition">
+        Book a Class
+      </a>
+    </li>
+  </ul>
+</div>
 </nav>
 
 <!-- ✅ HERO SECTION -->
@@ -389,6 +395,7 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
 
 
 
